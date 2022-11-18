@@ -7,7 +7,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>Electronics Shoppe Stores - Bootstrap 4 Template</title>
+		<title>TinyTots</title>
 
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 		<link href="css/responsive.css" rel="stylesheet">
 
 		<!-- Angular Import -->
-		<script src="angular.min.js"></script>
+		<script src="./js/angular.min.js"></script>
     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 	</head>
 	<body ng-app="mainApp">
@@ -31,7 +31,7 @@
 		<div class="top-bar text-center text-uppercase">
 		<!-- Nested Container Starts -->
 			<div class="container px-md-0">
-				<i class="fa fa-truck"></i> <span>Free Shipping</span> on order over $199. This offer is valid on all our store items.
+				<i class="fa fa-truck"></i> <span>Free Shipping</span> on orders over $199. This offer is valid on all our store items.
 			</div>
 		<!-- Nested Container Ends -->
 		</div>
@@ -72,7 +72,7 @@
 					<!-- Header Links Starts -->
 						<div class="col-md-6 col-sm-12">
 							<ul class="list-unstyled list-inline header-links text-center">
-								<li class="list-inline-item"><a href="#">Home</a></li>
+								
 								<li class="list-inline-item"><a href="#">Wish List(0)</a></li>
 								<li class="list-inline-item"><a href="#">My Account</a></li>
 								<li class="list-inline-item"><a href="#">Checkout</a></li>
@@ -81,91 +81,91 @@
 						</div>
 					<!-- Header Links Ends -->
 					<!-- Cart Starts -->
-						<div class="col-md-3 col-sm-12">
-							<div id="cart" class="btn-group btn-block">
-								<button type="button" data-toggle="dropdown" class="btn btn-block btn-lg dropdown-toggle text-uppercase text-md-right">
-									<i class="fa fa-shopping-cart"></i>
-									<strong class="d-none d-lg-inline-block">Shopping Cart</strong> 
-									<span id="cart-total">2 Items</span>
-									<i class="fa fa-angle-down"></i>
-								</button>
-								<ul class="dropdown-menu dropdown-menu-right">
-									<li>
-										<table class="table hcart">
+					<div class="col-lg-3 col-md-4 col-sm-12">
+						<div id="cart" class="btn-group btn-block">
+							<button type="button" data-toggle="dropdown" class="btn btn-block btn-lg dropdown-toggle text-uppercase text-md-right">
+								<i class="fa fa-shopping-cart"></i>
+								<strong class="d-none d-lg-inline-block">Shopping Cart</strong> 
+								<span id="cart-total">2 Items</span>
+								<i class="fa fa-angle-down"></i>
+							</button>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li>
+									<table class="table hcart">
+										<tr>
+											<td class="text-center">
+												<a href="product.html">
+													<img src="images/product-images/hcart-thumb1.jpg" alt="image" title="image" class="img-fluid1" />
+												</a>
+											</td>
+											<td class="text-left">
+												<a href="product-full.html">
+													Seeds
+												</a>
+											</td>
+											<td class="text-right">x 1</td>
+											<td class="text-right">$120.68</td>
+											<td class="text-center">
+												<a href="#">
+													<i class="fa fa-times"></i>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td class="text-center">
+												<a href="product.html">
+													<img src="images/product-images/hcart-thumb2.jpg" alt="image" title="image" class="img-fluid1" />
+												</a>
+											</td>
+											<td class="text-left">
+												<a href="product-full.html">
+													Organic
+												</a>
+											</td>
+											<td class="text-right">x 2</td>
+											<td class="text-right">$240.00</td>
+											<td class="text-center">
+												<a href="#">
+													<i class="fa fa-times"></i>
+												</a>
+											</td>
+										</tr>
+									</table>
+								</li>
+								<li>
+									<table class="table table-bordered total">
+										<tbody>
 											<tr>
-												<td class="text-center">
-													<a href="product.html">
-														<img src="images/product-images/hcart-thumb1.jpg" alt="image" title="image" class="img-fluid1" />
-													</a>
-												</td>
-												<td class="text-left">
-													<a href="product-full.html">
-														Seeds
-													</a>
-												</td>
-												<td class="text-right">x 1</td>
-												<td class="text-right">$120.68</td>
-												<td class="text-center">
-													<a href="#">
-														<i class="fa fa-times"></i>
-													</a>
-												</td>
+												<td class="text-right"><strong>Sub-Total</strong></td>
+												<td class="text-left">$1,101.00</td>
 											</tr>
 											<tr>
-												<td class="text-center">
-													<a href="product.html">
-														<img src="images/product-images/hcart-thumb2.jpg" alt="image" title="image" class="img-fluid1" />
-													</a>
-												</td>
-												<td class="text-left">
-													<a href="product-full.html">
-														Organic
-													</a>
-												</td>
-												<td class="text-right">x 2</td>
-												<td class="text-right">$240.00</td>
-												<td class="text-center">
-													<a href="#">
-														<i class="fa fa-times"></i>
-													</a>
-												</td>
+												<td class="text-right"><strong>Eco Tax (-2.00)</strong></td>
+												<td class="text-left">$4.00</td>
 											</tr>
-										</table>
-									</li>
-									<li>
-										<table class="table table-bordered total">
-											<tbody>
-												<tr>
-													<td class="text-right"><strong>Sub-Total</strong></td>
-													<td class="text-left">$1,101.00</td>
-												</tr>
-												<tr>
-													<td class="text-right"><strong>Eco Tax (-2.00)</strong></td>
-													<td class="text-left">$4.00</td>
-												</tr>
-												<tr>
-													<td class="text-right"><strong>VAT (17.5%)</strong></td>
-													<td class="text-left">$192.68</td>
-												</tr>
-												<tr>
-													<td class="text-right"><strong>Total</strong></td>
-													<td class="text-left">$1,297.68</td>
-												</tr>
-											</tbody>
-										</table>
-										<p class="text-right btn-block1">
-											<a href="cart.html">
-												View Cart
-											</a>
-											<a href="#">
-												Checkout
-											</a>
-										</p>
-									</li>									
-								</ul>
-							</div>
+											<tr>
+												<td class="text-right"><strong>VAT (17.5%)</strong></td>
+												<td class="text-left">$192.68</td>
+											</tr>
+											<tr>
+												<td class="text-right"><strong>Total</strong></td>
+												<td class="text-left">$1,297.68</td>
+											</tr>
+										</tbody>
+									</table>
+									<p class="text-right btn-block1">
+										<a href="cart.html">
+											View Cart
+										</a>
+										<a href="#">
+											Checkout
+										</a>
+									</p>
+								</li>									
+							</ul>
 						</div>
-					<!-- Cart Ends -->
+					</div>
+				<!-- Cart Ends -->
 					</div>
 				<!-- Nested Row Ends -->
 				</div>
@@ -178,21 +178,15 @@
 				<div class="container px-md-0">
 				<!-- Nested Row Starts -->
 					<div class="row">
-					<!-- Toll Free No Starts -->
-						<div class="col-lg-3 col-md-4 col-sm-12 text-center">
-							<h5>+001 998 980 1234</h5>
-							<h6 class="text-uppercase">5 days a week from 10.00 am to 6pm ist</h6>
-						</div>
-					<!-- Toll Free No Ends -->
 					<!-- Logo Starts -->
-						<div class="col-lg-6 col-md-4 col-sm-12 text-center">
+						<div class="col-lg-3 col-md-4 col-sm-12 text-center">
 							<div id="logo">
-								<a href="index.html"><img src="images/logo.png" title="" alt="" class="img-fluid img-center"></a>
+								<a href="#/!"><img src="images/logo_home.svg" title="" alt="" class="img-fluid img-center"></a>
 							</div>
 						</div>
 					<!-- Logo Ends -->
 					<!-- Search Starts -->
-						<div class="col-lg-3 col-md-4 col-sm-12">
+						<div class="col-lg-6 col-md-4 col-sm-12">
 							<div id="search">
 								<div class="input-group">
 									<input type="text" class="form-control input-lg text-uppercase" placeholder="Search">
@@ -205,6 +199,7 @@
 							</div>
 						</div>
 					<!-- Search Ends -->
+					
 					</div>
 				<!-- Nested Row Ends -->
 				</div>
@@ -226,63 +221,29 @@
 				<div class="collapse navbar-collapse navbar-cat-collapse">
 					<ul class="nav navbar-nav justify-content-center">
 						<li class="nav-item"><a href="#/!" class="nav-link">Home</a></li>
+						<li class="nav-item"><a href="#!about" class="nav-link">About Us</a></li>
 						<li class="nav-item dropdown">
-							<a href="category-list.html" class="nav-link dropdown-toggle" data-toggle="dropdown">
-								Appliances
+							<a href="#!products" class="nav-link dropdown-toggle" data-toggle="dropdown">
+								Products
 							</a>
 							<div class="dropdown-menu rounded-0">
-								<a href="#" class="dropdown-item">Mixer</a>
-								<a href="#" class="dropdown-item">Washing Machine</a>
-								<a href="#" class="dropdown-item">Micro Oven</a> 
+								<a href="#!babycare" class="dropdown-item">Baby care</a>
+								<a href="#!fashion" class="dropdown-item">Fashion</a>
+								<a href="#!toys" class="dropdown-item">Toys</a> 
+								<a href="#!wellnesshygiene" class="dropdown-item">Wellness & Hygiene</a> 
 							</div>
 						</li>
+						<li class="nav-item"><a href="#!brands" class="nav-link">Brands</a></li>
+						<li class="nav-item"><a href="#!stores" class="nav-link">Stores</a></li>
+						<li class="nav-item"><a href="#!news" class="nav-link">News</a></li>
+						<li class="nav-item"><a href="#!franchise" class="nav-link">Become franchise</a></li>
 						<li class="nav-item dropdown">
-							<a href="category-list.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Audio</a>
-							<div class="dropdown-menu rounded-0">
-								<div class="dropdown-inner">
-									<ul class="list-unstyled">
-										<li class="dropdown-header">Sub Category</li>
-										<li><a href="#">item 1</a></li>
-										<li><a href="#">item 2</a></li>
-										<li><a href="#">item 3</a></li>
-									</ul>										
-									<ul class="list-unstyled">
-										<li class="dropdown-header">Sub Category</li>
-										<li><a href="#">item 1</a></li>
-										<li><a href="#">item 2</a></li>
-										<li><a href="#">item 3</a></li>
-									</ul>
-									<ul class="list-unstyled">
-										<li class="dropdown-header">Sub Category</li>
-										<li><a href="#">item 1</a></li>
-										<li><a href="#">item 2</a></li>
-										<li><a href="#">item 3</a></li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li class="nav-item"><a href="category-list.html" class="nav-link">Computers</a></li>
-						<li class="nav-item"><a href="category-list.html" class="nav-link">Laptops</a></li>
-						<li class="nav-item"><a href="category-list.html" class="nav-link">DSLR Cameras</a></li>
-						<li class="nav-item"><a href="category-list.html" class="nav-link">Smart Phones</a></li>
-						<li class="nav-item dropdown">
-							<a href="category-list.html" class="nav-link dropdown-toggle" data-toggle="dropdown">
-								Pages
+							<a href="#!resources" class="nav-link dropdown-toggle" data-toggle="dropdown">
+								Resources
 							</a>
 							<div class="dropdown-menu rounded-0">
-								<a href="index.html" class="dropdown-item">Home</a>
-								<a href="about.html" class="dropdown-item">About</a>
-								<a href="category-list.html" class="dropdown-item">Category List</a>
-								<a href="category-grid.html" class="dropdown-item">Category Grid</a>
-								<a href="product.html" class="dropdown-item">Product</a>
-								<a href="product-full.html" class="dropdown-item">Product Full Width</a>
-								<a href="cart.html" class="dropdown-item">Cart</a>
-								<a href="login.html" class="dropdown-item">Login</a>
-								<a href="compare.html" class="dropdown-item">Compare Products</a>
-								<a href="typography.html" class="dropdown-item">Typography</a>
-								<a href="register.html" class="dropdown-item">Register</a>
-								<a href="contact.html" class="dropdown-item">Contact</a>
-								<a href="404.html" class="dropdown-item">404</a>
+								<a href="#!contact" class="dropdown-item">Contact Us</a>
+								<a href="#!faqs" class="dropdown-item">FAQs</a>
 							</div>
 						</li>
 					</ul>
@@ -292,9 +253,9 @@
 		<!-- Nested Container Ends -->
 		</nav>
 	<!-- Main Menu Ends -->
-	<div>
-		<div class="view" ng-view ng-controller="mainController"></div>
-	  </div>
+	<!--View starts-->
+		<div ng-view></div>
+	  
 	
 	<!-- Footer Section Starts -->
 		<footer id="footer-area">
@@ -380,7 +341,7 @@
 				<div class="container px-md-0 text-center text-md-left">
 				<!-- Starts -->
 					<p class="float-md-left">
-						&copy; 2019 Electronics Shoppe Stores. Designed By <a href="http://sainathchillapuram.com">Sainath Chillapuram</a>
+						&copy; 2022 TinyTots Retail Corporated</a>
 					</p>
 				<!-- Ends -->
 				<!-- Payment Gateway Links Starts -->
@@ -414,9 +375,19 @@
 		app.config(function ($routeProvider) {
 		  $routeProvider
 			.when("/", { templateUrl: "main.html" })
-			.when("/b", { templateUrl: "about.html" })
-			.when("/c", { templateUrl: "products.html" });
+			.when("/about", { templateUrl: "about.html" })
+			.when("/products", { templateUrl: "products.html" })
+			.when("/babycare", { templateUrl: "babycare.html" })
+			.when("/fashion", { templateUrl: "fashion.html" })
+			.when("/toys", { templateUrl: "toys.html" })
+			.when("/wellnesshygiene", { templateUrl: "wellness.html" })
+			.when("/brands", { templateUrl: "brands.html" })
+			.when("/stores", { templateUrl: "stores.html" })
+			.when("/news", { templateUrl: "news.html" })
+			.when("/franchise", { templateUrl: "franchise.html" })
+			.when("/resources", { templateUrl: "resources.html" });
 		});
+		</script>
 	<!-- Template JS Files -->
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/popper.min.js"></script>
