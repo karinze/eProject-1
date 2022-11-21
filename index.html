@@ -43,14 +43,14 @@
 					<!-- Logo Starts -->
 						<div class="col-lg-3 col-md-4 col-sm-12 text-center">
 							<div id="logo">
-								<a href="#/!"><img src="images/logo_home.svg" title="" alt="" class="img-fluid img-center"></a>
+								<a href="#/!"><img src="images/logo.png" title="" alt="" class="img-fluid img-center"></a>
 							</div>
 						</div>
 					<!-- Logo Ends -->
 					<!-- Search Starts -->
-						<div class="col-lg-6 col-md-4 col-sm-12">
+						<div class="col-lg-6 col-md-4 col-sm-12 d-flex flex-fill align-items-center">
 							<div id="search">
-								<div class="input-group">
+								<div class="input-group search-input-bar" style="border-radius: 25px; background-color: #fff">
 									<input type="text" class="form-control input-lg text-uppercase" placeholder="Search">
 									<span class="input-group-btn">
 									<button class="btn btn-lg" type="button">
@@ -170,7 +170,7 @@
 						<li class="nav-item"><a href="#/!" class="nav-link">Home</a></li>
 						<li class="nav-item"><a href="#!about" class="nav-link">About Us</a></li>
 						<li class="nav-item dropdown">
-							<a href="#!products" class="nav-link dropdown-toggle" data-toggle="dropdown">
+							<a href="#!category-list" class="nav-link dropdown-toggle" data-toggle="dropdown">
 								Products
 							</a>
 							<div class="dropdown-menu rounded-0">
@@ -200,10 +200,10 @@
 		<!-- Nested Container Ends -->
 		</nav>
 	<!-- Main Menu Ends -->
-	<!--View starts-->
+
+	<!--View starts DO NOT TOUCH PLEASE-->
 		<div ng-view></div>
 	  
-	
 	<!-- Footer Section Starts -->
 		<footer id="footer-area">
 		<!-- Footer Links Starts -->
@@ -332,8 +332,11 @@
 			.when("/brands", { templateUrl: "brands.html" })
 			.when("/stores", { templateUrl: "stores.html" })
 			.when("/news", { templateUrl: "news.html" })
+			.when("/compare", { templateUrl: "compare.html" })
 			.when("/franchise", { templateUrl: "franchise.html" })
 			.when("/resources", { templateUrl: "resources.html" })
+			.when("/category-grid", { templateUrl: "category-grid.html" })
+			.when("/category-list", { templateUrl: "category-list.html" })
 			.when("/cart", { templateUrl: "cart.html" });
 		});
 		</script>

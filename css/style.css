@@ -206,7 +206,7 @@ hr {
 
 	#cart .btn {
 		padding: 0;
-		color: #787878;
+		color: #fff;
 		font-size: 14px;
 		background: none;
 		-webkit-border-radius: 0;
@@ -221,12 +221,12 @@ hr {
 	}
 		#cart .btn .fa-shopping-cart {
 			margin-right: 8px;
-			color: #ec2f8e;
+			color: #fff;
 			font-size: 18px;
 			vertical-align: text-top;
 		}
 		#cart .btn strong {
-			color: #ec2f8e;
+			color: #fff;
 		}
 		#cart .btn span {
 			margin-left: 5px;
@@ -308,15 +308,16 @@ hr {
 /* Main Header Styles Starts */
 
 .main-header {
-	padding-top: 25px;
-	padding-bottom: 25px;
-	border: solid #e0e0e0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border: solid #ec2f8e;
 	border-width: 1px 0;
+	background-color: #ec2f8e;
 }
 	.main-header h5 {
 		margin-top: 5px;
 		margin-bottom: 7px;
-		color: #ec2f8e;
+		color: #fff;
 		font-weight: bold;
 	}
 	.main-header h6 {
@@ -561,7 +562,7 @@ hr {
 			border-bottom: 1px solid #e0e0e0;	
 		}
 		.product-col {
-			padding: 15px;
+			padding: 10px 15px;
 			margin-bottom: 20px;
 			border: 1px solid #e0e0e0;
 			-webkit-border-radius: 4px;
@@ -579,11 +580,11 @@ hr {
 			float: left;
 		}
 		.product-col .caption {
-			padding: 10px 0;
+			padding: 0;
 			text-transform: uppercase;			
 		}
 		.product-col.alt .caption {
-			padding-bottom: 20px;
+			padding-bottom: 5px;
 		}
 		.product-col.list .caption {
 			padding-top: 0;
@@ -610,7 +611,7 @@ hr {
 				padding-right: 20px;
 			}
 			.product-col .price {
-				padding-top: 10px;
+				padding: 10px 0;
 			}
 				.product-col .price-tax {
 					color: #787878;					
@@ -618,7 +619,7 @@ hr {
 				}
 				.product-col .price span.price-new {
 					padding-right: 5px;
-					color: #ec2f8e;
+					color: #ec2f2f;
 					font-size: 24px;
 				}
 				.product-col .price span.price-old {
@@ -1492,11 +1493,6 @@ hr {
     z-index: 3;
 }
 
-.container, .container-fluid {
-    width: 95%;
-    max-width: 1108px;
-    margin: auto;
-}
 .flex.flex-column {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1519,5 +1515,16 @@ hr {
 }
 .product-col h4, .product-col h4 a {
     overflow: hidden;
-	width:120px;
+	height: 40px;
+}
+
+#logo {
+	width: 100px;
+	height: auto;
+}
+
+.search-input-bar {
+	border-radius: 25px;
+    background-color: #fff;
+	width: 650px;
 }
