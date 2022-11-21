@@ -1,6 +1,30 @@
+@font-face {
+	font-family: Dosis;
+	src: url(/fonts/Dosis/Dosis-Regular.ttf);
+  }
+
+  @font-face {
+	font-family: Dosis;
+	src: url(/fonts/Dosis/Dosis-Bold.ttf);
+	font-weight: bold;
+  }
+
+  @font-face {
+	font-family: Dosis;
+	src: url(/fonts/Dosis/Dosis-Light.ttf);
+	font-weight: lighter;
+  }
+
+  @font-face {
+	font-family: Valera;
+	src: url(/fonts/Varela/VarelaRound-Regular.ttf);
+
+  }
+
+
 body {	
 	color: #252a2f;
-	font: 14px/24px 'Roboto Condensed', sans-serif;
+	font: 14px/24px Valera, sans-serif;
 	background: #fff;
 }
 
@@ -22,7 +46,7 @@ h4,
 h5, 
 h6 {
 	color: #292929;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Valera', sans-serif;
 }
 h1 { font-size: 38px; }
 h2 { font-size: 32px; }

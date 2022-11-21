@@ -27,61 +27,42 @@
     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 	</head>
 	<body ng-app="mainApp">
-	<!-- Top Bar Starts -->
-		<div class="top-bar text-center text-uppercase">
-		<!-- Nested Container Starts -->
-			<div class="container px-md-0">
-				<i class="fa fa-truck"></i> <span>Free Shipping</span> on orders over $199. This offer is valid on all our store items.
-			</div>
-		<!-- Nested Container Ends -->
-		</div>
-	<!-- Top Bar Ends -->
+	
 	<!-- Header Section Starts -->
 		<header class="header-area">
 		<!-- Header Top Starts -->
-			<div class="header-top text-uppercase">
+							
+			</div>
+		<!-- Header Top Ends -->
+		<!-- Main Header Starts -->
+			<div class="main-header">
 			<!-- Nested Container Starts -->
 				<div class="container px-md-0">
 				<!-- Nested Row Starts -->
 					<div class="row">
-					<!-- Currency & Languages Starts -->
-						<div class="col-md-3 col-sm-12">
-							<div class="float-md-left text-center text-md-left">
-							<!-- Languages Starts -->
-								<div class="btn-group">
-									<button class="btn btn-link dropdown-toggle" data-toggle="dropdown">Eng</button>
-									<ul class="dropdown-menu rounded-0">
-										<a href="#" class="dropdown-item">English</a>
-										<a href="#" class="dropdown-item">French</a>
-									</ul>
-								</div>
-							<!-- Languages Ends -->
-							<!-- Currency Starts -->
-								<div class="btn-group">
-									<button class="btn btn-link dropdown-toggle" data-toggle="dropdown">$</button>
-									<ul class="dropdown-menu rounded-0">
-										<a href="#" class="dropdown-item">Pound</a>
-										<a href="#" class="dropdown-item">US Dollar</a>
-										<a href="#" class="dropdown-item">Euro</a>
-									</ul>
-								</div>
-							<!-- Currency Ends -->
+					<!-- Logo Starts -->
+						<div class="col-lg-3 col-md-4 col-sm-12 text-center">
+							<div id="logo">
+								<a href="#/!"><img src="images/logo_home.svg" title="" alt="" class="img-fluid img-center"></a>
 							</div>
 						</div>
-					<!-- Currency & Languages Ends -->
-					<!-- Header Links Starts -->
-						<div class="col-md-6 col-sm-12">
-							<ul class="list-unstyled list-inline header-links text-center">
-								
-								<li class="list-inline-item"><a href="#">Wish List(0)</a></li>
-								<li class="list-inline-item"><a href="#">My Account</a></li>
-								<li class="list-inline-item"><a href="#">Checkout</a></li>
-								<li class="list-inline-item"><a href="#">Login</a></li>
-							</ul>
+					<!-- Logo Ends -->
+					<!-- Search Starts -->
+						<div class="col-lg-6 col-md-4 col-sm-12">
+							<div id="search">
+								<div class="input-group">
+									<input type="text" class="form-control input-lg text-uppercase" placeholder="Search">
+									<span class="input-group-btn">
+									<button class="btn btn-lg" type="button">
+										<i class="fa fa-search"></i>
+									</button>
+									</span>
+								</div>
+							</div>
 						</div>
-					<!-- Header Links Ends -->
+					<!-- Search Ends -->
 					<!-- Cart Starts -->
-					<div class="col-lg-3 col-md-4 col-sm-12">
+					<div class="col-lg-3 col-md-4 col-sm-12 d-flex justify-content-center">
 						<div id="cart" class="btn-group btn-block">
 							<button type="button" data-toggle="dropdown" class="btn btn-block btn-lg dropdown-toggle text-uppercase text-md-right">
 								<i class="fa fa-shopping-cart"></i>
@@ -169,40 +150,6 @@
 					</div>
 				<!-- Nested Row Ends -->
 				</div>
-			<!-- Nested Container Ends -->				
-			</div>
-		<!-- Header Top Ends -->
-		<!-- Main Header Starts -->
-			<div class="main-header">
-			<!-- Nested Container Starts -->
-				<div class="container px-md-0">
-				<!-- Nested Row Starts -->
-					<div class="row">
-					<!-- Logo Starts -->
-						<div class="col-lg-3 col-md-4 col-sm-12 text-center">
-							<div id="logo">
-								<a href="#/!"><img src="images/logo_home.svg" title="" alt="" class="img-fluid img-center"></a>
-							</div>
-						</div>
-					<!-- Logo Ends -->
-					<!-- Search Starts -->
-						<div class="col-lg-6 col-md-4 col-sm-12">
-							<div id="search">
-								<div class="input-group">
-									<input type="text" class="form-control input-lg text-uppercase" placeholder="Search">
-									<span class="input-group-btn">
-									<button class="btn btn-lg" type="button">
-										<i class="fa fa-search"></i>
-									</button>
-									</span>
-								</div>
-							</div>
-						</div>
-					<!-- Search Ends -->
-					
-					</div>
-				<!-- Nested Row Ends -->
-				</div>
 			<!-- Nested Container Ends -->
 			</div>
 		<!-- Main Header Ends -->
@@ -279,6 +226,7 @@
 								</div>
 							</div>
 							<h5>Stay Connected</h5>
+							<!-- Don't touch this -->
 							<ul class="list-unstyled list-inline foot-sm-links">
 								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
 								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
