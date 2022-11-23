@@ -392,15 +392,16 @@ hr {
 		}
 		#main-menu .navbar-nav > .nav-item > a {
 			padding: 10px 20px 10px;
-			color: #ec2f8e;
+			color: #e9f2ff;
 			font-weight: bold;
 			text-transform: uppercase;
+			font-size: .9rem;
 		}
 		#main-menu .navbar-nav > .nav-item.active a, 
 		#main-menu .navbar-nav > .nav-item > a:hover, 
 		#main-menu .navbar-nav > .nav-item > a:focus, 
 		#main-menu .navbar-nav > .nav-item.open a {
-			color: #2f81ec;
+			color: #e9f2ff;
 			background: none;
 		}		
 			#main-menu .dropdown-menu {
@@ -1527,4 +1528,36 @@ hr {
 	border-radius: 25px;
     background-color: #fff;
 	width: 650px;
+}
+
+.image {
+	height: 266px;
+	width: 266px;
+}
+
+.navbar-collapse {
+	background-color: #ec2f8e;
+	justify-content: space-evenly;
+}
+
+.hero-text {
+	text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  color: white!important;
+}
+
+.hero-text > h1 {
+	
+  color: rgb(255, 231, 231)!important;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.caption > h2 {
+	color: #ec2f8e;
 }

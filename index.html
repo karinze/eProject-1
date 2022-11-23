@@ -21,7 +21,7 @@
 		<link href="css/owl.carousel.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<link href="css/responsive.css" rel="stylesheet">
-
+		<link rel="stylesheet" href="/css/swiper-bundle.min.css">
 		<!-- Angular Import -->
 		<script src="./js/angular.min.js"></script>
     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
@@ -41,28 +41,52 @@
 				<!-- Nested Row Starts -->
 					<div class="row">
 					<!-- Logo Starts -->
-						<div class="col-lg-3 col-md-4 col-sm-12 text-center">
+						<div class="col-lg-2 col-md-4 col-sm-12 text-center">
 							<div id="logo">
 								<a href="#/!"><img src="images/logo.png" title="" alt="" class="img-fluid img-center"></a>
 							</div>
 						</div>
 					<!-- Logo Ends -->
 					<!-- Search Starts -->
-						<div class="col-lg-6 col-md-4 col-sm-12 d-flex flex-fill align-items-center">
-							<div id="search">
-								<div class="input-group search-input-bar" style="border-radius: 25px; background-color: #fff">
-									<input type="text" class="form-control input-lg text-uppercase" placeholder="Search">
-									<span class="input-group-btn">
-									<button class="btn btn-lg" type="button">
-										<i class="fa fa-search"></i>
-									</button>
-									</span>
-								</div>
-							</div>
+						<div class="col-lg-8 col-md-4 col-sm-12 d-flex flex-fill align-items-center justify-content-evenly">
+							<nav id="main-menu" class=" navbar navbar-expand-md rounded-0">
+								<!-- Nested Container Starts -->
+									<div class="container px-md-0">
+									<!-- Navbar Toggler Starts -->
+										<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target=".navbar-cat-collapse" aria-controls=".navbar-cat-collapse" aria-expanded="false" aria-badge="Toggle navigation">
+											<span class="navbar-toggler-icon fa fa-bars"></span>
+										</button>
+									<!-- Navbar Toggler Ends -->
+									<!-- Navbar Cat collapse Starts -->
+										<div class="collapse navbar-collapse navbar-cat-collapse">
+											<ul class="nav navbar-nav justify-content-between">
+												<li class="nav-item"><a href="#/!" class="nav-link">Home</a></li>
+												<li class="nav-item"><a href="#!about" class="nav-link">About Us</a></li>
+												<li class="nav-item dropdown">
+													<a href="#!category-list" class="nav-link dropdown-toggle" data-toggle="dropdown">
+														Products
+													</a>
+													<div class="dropdown-menu rounded-0">
+														<a href="#!babycare" class="dropdown-item">Baby care</a>
+														<a href="#!fashion" class="dropdown-item">Fashion</a>
+														<a href="#!toys" class="dropdown-item">Toys</a> 
+														<a href="#!wellnesshygiene" class="dropdown-item">Wellness & Hygiene</a> 
+													</div>
+												</li>
+											
+												<li class="nav-item"><a href="#!news" class="nav-link">News</a></li>
+												<li class="nav-item"><a href="#!franchise" class="nav-link">Become franchise</a></li>
+												
+											</ul>
+										</div>
+									<!-- Navbar Cat collapse Ends -->
+									</div>
+								<!-- Nested Container Ends -->
+								</nav>
 						</div>
 					<!-- Search Ends -->
 					<!-- Cart Starts -->
-					<div class="col-lg-3 col-md-4 col-sm-12 d-flex justify-content-center">
+					<div class="col-lg-2 col-md-4 col-sm-12 d-flex justify-content-center">
 						<div id="cart" class="btn-group btn-block">
 							<button type="button" data-toggle="dropdown" class="btn btn-block btn-lg dropdown-toggle text-uppercase text-md-right">
 								<i class="fa fa-shopping-cart"></i>
@@ -156,49 +180,7 @@
 		</header>
 	<!-- Header Section Ends -->
 	<!-- Main Menu Starts -->
-		<nav id="main-menu" class=" navbar navbar-expand-md rounded-0">
-		<!-- Nested Container Starts -->
-			<div class="container px-md-0">
-			<!-- Navbar Toggler Starts -->
-				<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target=".navbar-cat-collapse" aria-controls=".navbar-cat-collapse" aria-expanded="false" aria-badge="Toggle navigation">
-					<span class="navbar-toggler-icon fa fa-bars"></span>
-				</button>
-			<!-- Navbar Toggler Ends -->
-			<!-- Navbar Cat collapse Starts -->
-				<div class="collapse navbar-collapse navbar-cat-collapse">
-					<ul class="nav navbar-nav justify-content-center">
-						<li class="nav-item"><a href="#/!" class="nav-link">Home</a></li>
-						<li class="nav-item"><a href="#!about" class="nav-link">About Us</a></li>
-						<li class="nav-item dropdown">
-							<a href="#!category-list" class="nav-link dropdown-toggle" data-toggle="dropdown">
-								Products
-							</a>
-							<div class="dropdown-menu rounded-0">
-								<a href="#!babycare" class="dropdown-item">Baby care</a>
-								<a href="#!fashion" class="dropdown-item">Fashion</a>
-								<a href="#!toys" class="dropdown-item">Toys</a> 
-								<a href="#!wellnesshygiene" class="dropdown-item">Wellness & Hygiene</a> 
-							</div>
-						</li>
-						<li class="nav-item"><a href="#!brands" class="nav-link">Brands</a></li>
-						<li class="nav-item"><a href="#!stores" class="nav-link">Stores</a></li>
-						<li class="nav-item"><a href="#!news" class="nav-link">News</a></li>
-						<li class="nav-item"><a href="#!franchise" class="nav-link">Become franchise</a></li>
-						<li class="nav-item dropdown">
-							<a href="#!resources" class="nav-link dropdown-toggle" data-toggle="dropdown">
-								Resources
-							</a>
-							<div class="dropdown-menu rounded-0">
-								<a href="#!contact" class="dropdown-item">Contact Us</a>
-								<a href="#!faqs" class="dropdown-item">FAQs</a>
-							</div>
-						</li>
-					</ul>
-				</div>
-			<!-- Navbar Cat collapse Ends -->
-			</div>
-		<!-- Nested Container Ends -->
-		</nav>
+		
 	<!-- Main Menu Ends -->
 
 	<!--View starts DO NOT TOUCH PLEASE-->
@@ -257,6 +239,7 @@
 								<li><a href="#">Site Map</a></li>
 								<li><a href="#">Affiliates</a></li>
 								<li><a href="#">Specials</a></li>
+								<li><a href="#!faqs" >FAQs</a></li>
 							</ul>
 						</div>
 					<!-- Customer Service Ends -->
@@ -264,6 +247,7 @@
 						<div class="col-md-4 col-sm-4 col-12 last">
 							<h5>Contact Us</h5>
 							<ul>
+								
 								<li>My Company</li>
 								<li>
 									1247 LB Nagar Road, Hyderabad, Telangana - 35
@@ -347,5 +331,6 @@
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/custom.js"></script>	
+	<script src="js/swiper-bundle.min.js"></script>
 	</body>
 </html>
