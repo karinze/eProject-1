@@ -1,0 +1,14 @@
+{
+    {
+        "name": "Fruit Me Up Peach Juice",
+        "category": "Baby Food",
+        "price": 10.25,
+        "imgSrc": "images/product-images/babyfood/1.png"
+    },
+    {
+        "name": "Fruit Me Up Strawberry Juice",
+        "category": "Baby Food",
+        "price": 10.25,
+        "imgSrc": "images/product-images/babyfood/2.png"
+    }
+}
