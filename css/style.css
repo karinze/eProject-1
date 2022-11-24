@@ -1592,3 +1592,21 @@ a:hover {
 .categories > a {
 	color: #ec2f8e;
 }
+.list-inline-item-1{
+	width: 93px;
+	height: 93px;
+
+}
+.list-inline-item-1 {
+	display: inline-block;
+  }
+  
+  .list-inline-item-1:not(:last-child) {
+	margin-right: 0.5rem;
+  }
+  .product-info.full .images-block .list-inline-item-1 {
+	margin-right: 8px;
+}
+.product-info .images-block .list-inline-item-1 {
+	margin-right: 2px;
+}
