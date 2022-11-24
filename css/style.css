@@ -1561,3 +1561,7 @@ a:hover {
 .caption > h2 {
 	color: #ec2f8e;
 }
+.img-responsive{
+	width: 270px;
+	height: 270px;
+}
