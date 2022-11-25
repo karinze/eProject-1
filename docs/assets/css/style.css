@@ -254,8 +254,8 @@ ul.header-links li a:focus {
   margin-top: 10px;
   padding: 5px;
   min-width: 100%;
-  color: #fff;
-  background-color: #ec2f8e;
+  color: #ec2f8e;
+  background-color: #fff;
   border: none;
   z-index: 1001;
   -webkit-border-radius: 0;
@@ -1667,7 +1667,7 @@ a:hover {
   color: black;
 }
 .btn-default:hover {
-  color: rgb(243, 194, 212);
+  color: rgb(0, 0, 0);
   background-color: rgb(213, 238, 255);
   border-color: rgb(53, 63, 182);
 }
