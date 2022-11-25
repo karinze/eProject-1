@@ -705,12 +705,13 @@ ul.header-links li a:focus {
   font-size: 15px;
   font-weight: 600;
   border-bottom: none;
+  color: #ec2f8e !important;
 }
 .shopping-cart-table tbody > tr > td {
   font-size: 16px;
 }
 .shopping-cart-table tbody > tr > td a:hover {
-  color: #252a2f;
+  color: #ec2f8e !important;
 }
 
 /* Compare Page Styles Starts */
@@ -1664,4 +1665,22 @@ a:hover {
 }
 .fa-th {
   color: black;
+}
+.fa {
+  color: #ec2f8e !important;
+}
+.fa:hover {
+  color: #2f81ec!important;
+}
+.btn-default:hover {
+  color: rgb(243, 194, 212);
+  background-color: rgb(213, 238, 255);
+  border-color: rgb(53, 63, 182);
+}
+td.text-center {
+  margin: auto!important;
+}
+table.center{
+  margin: auto;
+  
 }

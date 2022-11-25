@@ -10,20 +10,20 @@
 		<title>TinyTots</title>
 
 		<!-- Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="../docs/assets/css/bootstrap.min.css" rel="stylesheet">
 
 		<!-- Google Web Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
 
 		<!-- Template CSS Files  -->
 		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-		<link href="css/magnific-popup.css" rel="stylesheet">
-		<link href="css/owl.carousel.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
-		<link href="css/responsive.css" rel="stylesheet">
-		<link rel="stylesheet" href="/css/swiper-bundle.min.css">
+		<link href="../docs/assets/css/magnific-popup.css" rel="stylesheet">
+		<link href="../docs/assets/css/owl.carousel.css" rel="stylesheet">
+		<link href="../docs/assets/css/style.css" rel="stylesheet">
+		<link href="../docs/assets/css/responsive.css" rel="stylesheet">
+		<link rel="stylesheet" href="../docs/assets/css/swiper-bundle.min.css">
 		<!-- Angular Import -->
-		<script src="./js/angular.min.js"></script>
+		<script src="../js/angular.min.js"></script>
     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 	</head>
 	<body ng-app="mainApp">
@@ -43,7 +43,7 @@
 					<!-- Logo Starts -->
 						<div class="col-lg-2 col-md-4 col-sm-12 text-center">
 							<div id="logo">
-								<a href="#/!"><img src="../images/logo.png" title="" alt="" class="img-fluid img-center"></a>
+								<a href="#/!"><img src="../docs/assets/images/logo.png" title="" alt="" class="img-fluid img-center"></a>
 							</div>
 						</div>
 					<!-- Logo Ends -->
@@ -86,88 +86,15 @@
 					<!-- Search Ends -->
 					<!-- Cart Starts -->
 					<div class="col-lg-2 col-md-4 col-sm-12 d-flex justify-content-center">
-						<div id="cart" class="btn-group btn-block">
-							<button type="button" data-toggle="dropdown" class="btn btn-block btn-lg dropdown-toggle text-uppercase text-md-right">
+						<a href="#!cart" id="cart" class="btn-group btn-block">
+							<button type="button" class="btn btn-block btn-lg dropdown-toggle text-uppercase text-md-right">
 								<i class="fa fa-shopping-cart"></i>
 								<strong class="d-none d-lg-inline-block">Shopping Cart</strong> 
 								<span id="cart-total">2 Items</span>
 								<i class="fa fa-angle-down"></i>
 							</button>
-							<ul class="dropdown-menu dropdown-menu-right">
-								<li>
-									<table class="table hcart">
-										<tr>
-											<td class="text-center">
-												<a href="#!product-1">
-													<img src="../images/product-images/formula/formula2.jpg" alt="image" title="image" class="img-fluid1 cart-image" />
-												</a>
-											</td>
-											<td class="text-left">
-												<a href="#!category-list">
-													Aptakid
-												</a>
-											</td>
-											<td class="text-right">x3</td>
-											<td class="text-right">$120.68</td>
-											<td class="text-center">
-												<a href="#">
-													<i class="fa fa-times"></i>
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td class="text-center">
-												<a href="#!product-1">
-													<img src="../images/product-images/babyfood/1.png" alt="image" title="image" class="img-fluid1 cart-image" />
-												</a>
-											</td>
-											<td class="text-left">
-												<a href="#!category-list">
-													Baby food
-												</a>
-											</td>
-											<td class="text-right">x2</td>
-											<td class="text-right">$20.00</td>
-											<td class="text-center">
-												<a href="#">
-													<i class="fa fa-times"></i>
-												</a>
-											</td>
-										</tr>
-									</table>
-								</li>
-								<li>
-									<table class="table table-bordered total">
-										<tbody>
-											<tr>
-												<td class="text-right"><strong>Sub-Total</strong></td>
-												<td class="text-left">$1,101.00</td>
-											</tr>
-											<tr>
-												<td class="text-right"><strong>Eco Tax (-2.00)</strong></td>
-												<td class="text-left">$4.00</td>
-											</tr>
-											<tr>
-												<td class="text-right"><strong>VAT (17.5%)</strong></td>
-												<td class="text-left">$192.68</td>
-											</tr>
-											<tr>
-												<td class="text-right"><strong>Total</strong></td>
-												<td class="text-left">$1,297.68</td>
-											</tr>
-										</tbody>
-									</table>
-									<p class="text-right btn-block1">
-										<a href="#!cart">
-											View Cart
-										</a>
-										<a href="#">
-											Checkout
-										</a>
-									</p>
-								</li>									
-							</ul>
-						</div>
+
+						</a>
 					</div>
 				<!-- Cart Ends -->
 					</div>
@@ -278,19 +205,19 @@
 				<!-- Payment Gateway Links Starts -->
 					<ul class="float-md-right list-inline">
 						<li class="list-inline-item"> 
-							<img src="../images/payment-icon/cirrus.png" alt="PaymentGateway" />
+							<img src="../docs/assets/images/payment-icon/cirrus.png" alt="PaymentGateway" />
 						</li>
 						<li class="list-inline-item"> 
-							<img src="../images/payment-icon/paypal.png" alt="PaymentGateway" />
+							<img src="../docs/assets/images/payment-icon/paypal.png" alt="PaymentGateway" />
 						</li>
 						<li class="list-inline-item"> 
-							<img src="../images/payment-icon/visa.png" alt="PaymentGateway" />
+							<img src="../docs/assets/images/payment-icon/visa.png" alt="PaymentGateway" />
 						</li>
 						<li class="list-inline-item"> 
-							<img src="../images/payment-icon/mastercard.png" alt="PaymentGateway" />
+							<img src="../docs/assets/images/payment-icon/mastercard.png" alt="PaymentGateway" />
 						</li>
 						<li class="list-inline-item"> 
-							<img src="../images/payment-icon/americanexpress.png" alt="PaymentGateway" />
+							<img src="../docs/assets/images/payment-icon/americanexpress.png" alt="PaymentGateway" />
 						</li>
 					</ul>
 				<!-- Payment Gateway Links Ends -->
@@ -324,12 +251,12 @@
 		});
 		</script>
 	<!-- Template JS Files -->
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/custom.js"></script>	
-	<script src="js/swiper-bundle.min.js"></script>
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.magnific-popup.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/custom.js"></script>	
+	<script src="../js/swiper-bundle.min.js"></script>
 	</body>
 </html>
