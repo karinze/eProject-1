@@ -1520,7 +1520,7 @@ a.list-group-item {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(images/banners/hero_banner.webp);
+    url(../images/banners/hero_banner.webp);
 }
 
 .data-hero {
