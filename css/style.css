@@ -1656,3 +1656,12 @@ a:hover {
   width: 100px;
   height: 100px;
 }
+.th-list-active {
+  color: #ec2f8e !important;
+}
+.th-grid-active {
+  color: #ec2f8e !important;
+}
+.fa-th {
+  color: black;
+}
