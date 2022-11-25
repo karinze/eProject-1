@@ -1666,12 +1666,6 @@ a:hover {
 .fa-th {
   color: black;
 }
-.fa {
-  color: #ec2f8e !important;
-}
-.fa:hover {
-  color: #2f81ec!important;
-}
 .btn-default:hover {
   color: rgb(243, 194, 212);
   background-color: rgb(213, 238, 255);
