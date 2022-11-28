@@ -1,4 +1,5 @@
 {
+    "products": [ 
     {
         "id": "1",
         "name": "Fruit Me Up Peach Juice",
@@ -403,7 +404,7 @@
         "madeIn": "Viet Nam",
         "price": 10.25,
         "imgSrc": "../js/images/product-images/vitamins/men-vi-sinh-clausy-10-ong-hop.png"
-    },
-}
+    }
+]}
 
 
