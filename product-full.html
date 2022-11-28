@@ -1,80 +1,93 @@
-
-	
-	<!-- Main Container Starts -->
-		<div id="main-container" class="container px-md-0">
-        <!-- Breadcrumb Starts -->
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#/!">Home</a></li>                    
-					<li class="breadcrumb-item"><a href="#!category-list">Category</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Product</li>
-                </ol>
-            </nav>
-        <!-- Breadcrumb Ends -->
-	    <!-- Product Info Starts -->
-		    <div class="row product-info full">
-            <!-- Left Starts -->
-                <div class="col-sm-4 images-block">
-                    <p><a href="" class="product-img-big">
-                        <img src="images/product-images/formula/formula2.jpg" alt="Image" class="img-fluid rounded-0" />
-                    </a></p>
-                    <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item-1">
-                            <a href="">
-                                <img src="images/product-images/formula/formula2-1.jpg" alt="Image" class="img-fluid rounded-01" />
-                            </a>
-                        </li>
-                        <li class="list-inline-item-1">
-                            <a href="">
-                                <img src="images/product-images/formula/formula2-2.jpg" alt="Image" class="img-fluid rounded-01" />
-                            </a>
-                        </li>
-                        <li class="list-inline-item-1">
-                            <a href="">
-                                <img src="images/product-images/formula/formula2-3.jpg" alt="Image" class="img-fluid rounded-01" />
-                            </a>
-                        </li>
-                        <li class="list-inline-item-1">
-                            <a href="">
-                                <img src="images/product-images/formula/formula2-4.jpg" alt="Image" class="img-fluid rounded-01" />
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            <!-- Left Ends -->
-            <!-- Right Starts -->
-                <div class="col-sm-8 product-details">
-                    <div class="panel-smart">
-                    <!-- Product Name Starts -->
-                        <h2>MILK APTAKID</h2>
-                    <!-- Product Name Ends -->
-                        <hr />
-                    <!-- Manufacturer Starts -->
-                        <ul class="list-unstyled manufacturer">
-                            <li>
-                                <span>Brand:</span> Aptamil
-                            </li>
-                            <li><span>Made in:</span> New Zealand</li>
-                            <li><span>Origin:</span> France</li>
-                            <li>
-                                <span>weight:</span> 900g</strong>
-                            </li>
-                        </ul>
-                    <!-- Manufacturer Ends -->
-                        <hr />
-                    <!-- Price Starts -->
-                        <div class="price">
-                            <span class="price-head">Price :</span>
-                            <span class="price-new">$43.77</span> 
-                            <span class="price-old">$51.82</span>
-                            
-                        </div>
-                    <!-- Price Ends -->
-                        <hr />
-                    <!-- Available Options Starts -->
-                        <div class="options">
-                            <!-- <h3>Available Options</h3> -->
-                            <!-- <div class="form-group">
+<!-- Main Container Starts -->
+<div id="main-container" class="container px-md-0">
+  <!-- Breadcrumb Starts -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#/!">Home</a></li>
+      <li class="breadcrumb-item"><a href="#!category-list">Category</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Product</li>
+    </ol>
+  </nav>
+  <!-- Breadcrumb Ends -->
+  <!-- Product Info Starts -->
+  <div class="row product-info full">
+    <!-- Left Starts -->
+    <div class="col-sm-4 images-block">
+      <p>
+        <a href="" class="product-img-big">
+          <img
+            src="images/product-images/formula/formula2.jpg"
+            alt="Image"
+            class="img-fluid rounded-0"
+          />
+        </a>
+      </p>
+      <ul class="list-unstyled list-inline">
+        <li class="list-inline-item-1">
+          <a href="">
+            <img
+              src="images/product-images/formula/formula2-1.jpg"
+              alt="Image"
+              class="img-fluid rounded-01"
+            />
+          </a>
+        </li>
+        <li class="list-inline-item-1">
+          <a href="">
+            <img
+              src="images/product-images/formula/formula2-2.jpg"
+              alt="Image"
+              class="img-fluid rounded-01"
+            />
+          </a>
+        </li>
+        <li class="list-inline-item-1">
+          <a href="">
+            <img
+              src="images/product-images/formula/formula2-3.jpg"
+              alt="Image"
+              class="img-fluid rounded-01"
+            />
+          </a>
+        </li>
+        <li class="list-inline-item-1">
+          <a href="">
+            <img
+              src="images/product-images/formula/formula2-4.jpg"
+              alt="Image"
+              class="img-fluid rounded-01"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Left Ends -->
+    <!-- Right Starts -->
+    <div class="col-sm-8 product-details">
+      <div class="panel-smart">
+        <!-- Product Name Starts -->
+        <h2>MILK APTAKID {{name}}</h2>
+        <!-- Product Name Ends -->
+        <hr />
+        <!-- Manufacturer Starts -->
+        <ul class="list-unstyled manufacturer">
+          <li><span>Brand:</span> Aptamil {{brand}}</li>
+          <li><span>Made in:</span> New Zealand {{madeIn}}</li>
+          <li></li>
+        </ul>
+        <!-- Manufacturer Ends -->
+        <hr />
+        <!-- Price Starts -->
+        <div class="price">
+          <span class="price-head">Price :</span>
+          <span class="price-new">$43.77 {{price}}</span>
+        </div>
+        <!-- Price Ends -->
+        <hr />
+        <!-- Available Options Starts -->
+        <div class="options">
+          <!-- <h3>Available Options</h3> -->
+          <!-- <div class="form-group">
                                 <label for="select" class="control-label text-uppercase">Select:</label>
                                 <select name="select" id="select" class="form-control">
                                     <option value="1" selected>Select</option>
@@ -112,289 +125,355 @@
                                     </label>
                                 </div>
                             </div> -->
-                            <div class="form-group">
-                                <label class="control-label text-uppercase" for="input-quantity">Qty:</label>
-                                <input type="number" name="quantity" value="1" min="1" max="" id="input-quantity" class="form-control" />
-                            </div>
-                            <div class="cart-button button-group float-right">
-                                <button type="button" title="Wishlist" class="btn btn-wishlist">
-                                    <i class="fa fa-heart"></i>
-                                </button>
-                                <button type="button" title="Compare" class="btn btn-compare">
-                                    <i class="fa fa-bar-chart-o"></i>
-                                </button>
-                                <button type="button" class="btn btn-cart">
-                                    Add to Cart
-                                </button>									
-                            </div>
-                        </div>
-                    <!-- Available Options Ends -->
-                    </div>
-                </div>
-            <!-- Right Ends -->
+          <div class="form-group">
+            <label class="control-label text-uppercase" for="input-quantity"
+              >Qty:</label
+            >
+            <input
+              type="number"
+              name="quantity"
+              value="1"
+              min="1"
+              max=""
+              id="input-quantity"
+              class="form-control"
+            />
+          </div>
+          <div class="cart-button button-group float-right">
+            <button type="button" title="Wishlist" class="btn btn-wishlist">
+              <i class="fa fa-heart"></i>
+            </button>
+            <button type="button" title="Compare" class="btn btn-compare">
+              <i class="fa fa-bar-chart-o"></i>
+            </button>
+            <button type="button" class="btn btn-cart">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Available Options Ends -->
+      </div>
+    </div>
+    <!-- Right Ends -->
+  </div>
+  <!-- Product Info Ends -->
+  <!-- Tabs Starts -->
+  <div class="tabs-panel panel-smart">
+    <!-- Nav Tabs Starts -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a href="#tab-description" class="nav-link active">Description</a>
+      </li>
+      <li class="nav-item">
+        <a href="#tab-specification" class="nav-link">Specification</a>
+      </li>
+      <li class="nav-item">
+        <a href="#tab-ainfo" class="nav-link">Additional Information</a>
+      </li>
+      <li class="nav-item">
+        <a href="#tab-review" class="nav-link">Review</a>
+      </li>
+    </ul>
+    <!-- Nav Tabs Ends -->
+    <!-- Tab Content Starts -->
+    <div class="tab-content clearfix">
+      <!-- Description Starts -->
+      <div class="tab-pane active" id="tab-description">
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
+        <p>
+          It has survived not only five centuries, but also the leap into
+          electronic typesetting, remaining essentially unchanged. It was
+          popularised in the 1960s with the release of Letraset sheets
+          containing Lorem Ipsum passages, and more recently with desktop
+          publishing software like Aldus PageMaker including versions of Lorem
+          Ipsum.
+        </p>
+      </div>
+      <!-- Description Ends -->
+      <!-- Specification Starts -->
+      <div class="tab-pane" id="tab-specification">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <td colspan="2"><strong>Name</strong></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td>Attribute Specification</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <td colspan="2"><strong>Name</strong></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td>Attribute Specification</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Specification Ends -->
+      <!-- Additional Information Starts -->
+      <div class="tab-pane" id="tab-ainfo">
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
+      </div>
+      <!-- Additional Information Ends -->
+      <!-- Review Starts -->
+      <div class="tab-pane" id="tab-review">
+        <form>
+          <div class="form-group required row">
+            <label class="col-sm-2 col-form-label text-right" for="input-name"
+              >Name</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="text"
+                name="name"
+                value=""
+                id="input-name"
+                class="form-control"
+              />
             </div>
-        <!-- Product Info Ends -->	
-        <!-- Tabs Starts -->
-            <div class="tabs-panel panel-smart">
-            <!-- Nav Tabs Starts -->
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a href="#tab-description" class="nav-link active">Description</a>
-                    </li>
-                    <li class="nav-item"><a href="#tab-specification" class="nav-link">Specification</a></li>
-                    <li class="nav-item"><a href="#tab-ainfo" class="nav-link">Additional Information</a></li>
-                    <li class="nav-item"><a href="#tab-review" class="nav-link">Review</a></li>
-                </ul>
-            <!-- Nav Tabs Ends -->
-            <!-- Tab Content Starts -->
-                <div class="tab-content clearfix">
-                <!-- Description Starts -->
-                    <div class="tab-pane active" id="tab-description">
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
-                        <p>
-                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
-                    </div>
-                <!-- Description Ends -->
-                <!-- Specification Starts -->
-                    <div class="tab-pane" id="tab-specification">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                <td colspan="2"><strong>Name</strong></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                <td>Name</td>
-                                <td>Attribute Specification</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                <td colspan="2"><strong>Name</strong></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                <td>Name</td>
-                                <td>Attribute Specification</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                <!-- Specification Ends -->
-                <!-- Additional Information Starts -->
-                    <div class="tab-pane" id="tab-ainfo">
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
-                    </div>
-                <!-- Additional Information Ends -->
-                <!-- Review Starts -->
-                    <div class="tab-pane" id="tab-review">
-                        <form>
-                            <div class="form-group required row">
-                                <label class="col-sm-2 col-form-label text-right" for="input-name">Name</label>
-                                <div class="col-sm-10">
-                                <input type="text" name="name" value="" id="input-name" class="form-control" />
-                                </div>
-                            </div>
-                            <div class="form-group required row">
-                                <label class="col-sm-2 col-form-label text-right" for="input-review">Review</label>
-                                <div class="col-sm-10">
-                                    <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
-                                    <div class="help-block">
-                                        Some note goes here..
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group required row">
-                                <label class="col-sm-2 col-form-label text-right ratings">Ratings</label>
-                                <div class="col-sm-10">
-                                    Bad&nbsp;
-                                    <input type="radio" name="rating" value="1" />
-                                    &nbsp;
-                                    <input type="radio" name="rating" value="2" />
-                                    &nbsp;
-                                    <input type="radio" name="rating" value="3" />
-                                    &nbsp;
-                                    <input type="radio" name="rating" value="4" />
-                                    &nbsp;
-                                    <input type="radio" name="rating" value="5" />
-                                    &nbsp;Good
-                                </div>
-                            </div>
-                            <div class="buttons">
-                                <div class="offset-sm-2 col-sm-10">
-                                    <button type="button" id="button-review" class="btn btn-main">
-                                        Submit
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                <!-- Review Ends -->
-                </div>
-            <!-- Tab Content Ends -->
+          </div>
+          <div class="form-group required row">
+            <label class="col-sm-2 col-form-label text-right" for="input-review"
+              >Review</label
+            >
+            <div class="col-sm-10">
+              <textarea
+                name="text"
+                rows="5"
+                id="input-review"
+                class="form-control"
+              ></textarea>
+              <div class="help-block">Some note goes here..</div>
             </div>
-        <!-- Tabs Ends -->		
-        <!-- Related Products Starts -->
-            <div class="product-info-box">
-                <h4 class="heading">Related Products</h4>
-            <!-- Products Row Starts -->
-                <div class="row">
-                <!-- Product #1 Starts -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-col">
-                            <div class="image">
-                                <img src="images/product-images/formula/formula3.jpg" alt="product" class="img-fluid" />
-                            </div>
-                            <div class="caption">
-                                <div class="price">
-                                    <span class="price-new">$25.65</span> 
-                                    <span class="price-old">$26.85</span>
-                                </div>
-                                
-                                <h4><a href="product.html">Milk Aptamil</a></h4>
-                                <div class="ratings">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <span><a href="#">1 review(s)</a></span>
-                                </div>
-                                <div class="cart-button button-group">
-                                    <button type="button" class="btn btn-cart">
-                                        <i class="fa fa-shopping-cart"></i>
-                                    </button>		
-                                    <button type="button" title="Wishlist" class="btn btn-wishlist">
-                                        <i class="fa fa-heart"></i>
-                                    </button>
-                                    <button type="button" title="Compare" class="btn btn-compare">
-                                        <i class="fa fa-bar-chart-o"></i>
-                                    </button>							
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <!-- Product #1 Ends -->
-                <!-- Product #2 Starts -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-col">
-                            <div class="image">
-                                <img src="images/product-images/formula/formula4.jpg" alt="product" class="img-fluid" />
-                            </div>
-                            <div class="caption">
-                                <div class="price">
-                                    <span class="price-new">$20.13</span> 
-                                    <span class="price-old">$21.30</span>
-                                </div>
-                                
-                                <h4><a href="product.html">Meiji Infant Formula</a></h4>
-                                <div class="ratings">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <span><a href="#">1 review(s)</a></span>
-                                </div>
-                                <div class="cart-button button-group">
-                                    <button type="button" class="btn btn-cart">
-                                        <i class="fa fa-shopping-cart"></i>
-                                    </button>		
-                                    <button type="button" title="Wishlist" class="btn btn-wishlist">
-                                        <i class="fa fa-heart"></i>
-                                    </button>
-                                    <button type="button" title="Compare" class="btn btn-compare">
-                                        <i class="fa fa-bar-chart-o"></i>
-                                    </button>							
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <!-- Product #2 Ends -->
-                <!-- Product #3 Starts -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-col">
-                            <div class="image">
-                                <img src="images/product-images/formula/formula5.jpg" alt="product" class="img-fluid" />
-                            </div>
-                            <div class="caption">
-                                <div class="price">
-                                    <span class="price-new">$13.90</span> 
-                                    <span class="price-old">$14.50</span>
-                                </div>
-                                
-                                <h4><a href="product.html">Optinum Gold 2</a></h4>
-                                <div class="ratings">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <span><a href="#">1 review(s)</a></span>
-                                </div>
-                                <div class="cart-button button-group">
-                                    <button type="button" class="btn btn-cart">
-                                        <i class="fa fa-shopping-cart"></i>
-                                    </button>		
-                                    <button type="button" title="Wishlist" class="btn btn-wishlist">
-                                        <i class="fa fa-heart"></i>
-                                    </button>
-                                    <button type="button" title="Compare" class="btn btn-compare">
-                                        <i class="fa fa-bar-chart-o"></i>
-                                    </button>							
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <!-- Product #3 Ends -->
-                <!-- Product #4 Starts -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-col">
-                            <div class="image">
-                                <img src="images/product-images/formula/Similac_5g.jpg" alt="product" class="img-fluid" />
-                            </div>
-                            <div class="caption">
-                                <div class="price">
-                                    <span class="price-new">$24.10</span> 
-                                    <span class="price-old">$25.73</span>
-                                </div>
-                                
-                                <h4><a href="product.html">PediaSure </a></h4>
-                                <div class="ratings">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <span><a href="#">1 review(s)</a></span>
-                                </div>
-                                <div class="cart-button button-group">
-                                    <button type="button" class="btn btn-cart">
-                                        <i class="fa fa-shopping-cart"></i>
-                                    </button>		
-                                    <button type="button" title="Wishlist" class="btn btn-wishlist">
-                                        <i class="fa fa-heart"></i>
-                                    </button>
-                                    <button type="button" title="Compare" class="btn btn-compare">
-                                        <i class="fa fa-bar-chart-o"></i>
-                                    </button>							
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <!-- Product #4 Ends -->
-                </div>
-            <!-- Products Row Ends -->
+          </div>
+          <div class="form-group required row">
+            <label class="col-sm-2 col-form-label text-right ratings"
+              >Ratings</label
+            >
+            <div class="col-sm-10">
+              Bad&nbsp;
+              <input type="radio" name="rating" value="1" />
+              &nbsp;
+              <input type="radio" name="rating" value="2" />
+              &nbsp;
+              <input type="radio" name="rating" value="3" />
+              &nbsp;
+              <input type="radio" name="rating" value="4" />
+              &nbsp;
+              <input type="radio" name="rating" value="5" />
+              &nbsp;Good
             </div>
-        <!-- Related Products Ends -->
-		</div>
-	<!-- Main Container Ends -->
+          </div>
+          <div class="buttons">
+            <div class="offset-sm-2 col-sm-10">
+              <button type="button" id="button-review" class="btn btn-main">
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- Review Ends -->
+    </div>
+    <!-- Tab Content Ends -->
+  </div>
+  <!-- Tabs Ends -->
+  <!-- Related Products Starts -->
+  <div class="product-info-box">
+    <h4 class="heading">Related Products</h4>
+    <!-- Products Row Starts -->
+    <div class="row">
+      <!-- Product #1 Starts -->
+      <div class="col-md-3 col-sm-6">
+        <div class="product-col">
+          <div class="image">
+            <img
+              src="images/product-images/formula/formula3.jpg"
+              alt="product"
+              class="img-fluid"
+            />
+          </div>
+          <div class="caption">
+            <div class="price">
+              <span class="price-new">$25.65</span>
+              <span class="price-old">$26.85</span>
+            </div>
+
+            <h4><a href="product.html">Milk Aptamil</a></h4>
+            <div class="ratings">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <span><a href="#">1 review(s)</a></span>
+            </div>
+            <div class="cart-button button-group">
+              <button type="button" class="btn btn-cart">
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+              <button type="button" title="Wishlist" class="btn btn-wishlist">
+                <i class="fa fa-heart"></i>
+              </button>
+              <button type="button" title="Compare" class="btn btn-compare">
+                <i class="fa fa-bar-chart-o"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product #1 Ends -->
+      <!-- Product #2 Starts -->
+      <div class="col-md-3 col-sm-6">
+        <div class="product-col">
+          <div class="image">
+            <img
+              src="images/product-images/formula/formula4.jpg"
+              alt="product"
+              class="img-fluid"
+            />
+          </div>
+          <div class="caption">
+            <div class="price">
+              <span class="price-new">$20.13</span>
+              <span class="price-old">$21.30</span>
+            </div>
+
+            <h4><a href="product.html">Meiji Infant Formula</a></h4>
+            <div class="ratings">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <span><a href="#">1 review(s)</a></span>
+            </div>
+            <div class="cart-button button-group">
+              <button type="button" class="btn btn-cart">
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+              <button type="button" title="Wishlist" class="btn btn-wishlist">
+                <i class="fa fa-heart"></i>
+              </button>
+              <button type="button" title="Compare" class="btn btn-compare">
+                <i class="fa fa-bar-chart-o"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product #2 Ends -->
+      <!-- Product #3 Starts -->
+      <div class="col-md-3 col-sm-6">
+        <div class="product-col">
+          <div class="image">
+            <img
+              src="images/product-images/formula/formula5.jpg"
+              alt="product"
+              class="img-fluid"
+            />
+          </div>
+          <div class="caption">
+            <div class="price">
+              <span class="price-new">$13.90</span>
+              <span class="price-old">$14.50</span>
+            </div>
+
+            <h4><a href="product.html">Optinum Gold 2</a></h4>
+            <div class="ratings">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <span><a href="#">1 review(s)</a></span>
+            </div>
+            <div class="cart-button button-group">
+              <button type="button" class="btn btn-cart">
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+              <button type="button" title="Wishlist" class="btn btn-wishlist">
+                <i class="fa fa-heart"></i>
+              </button>
+              <button type="button" title="Compare" class="btn btn-compare">
+                <i class="fa fa-bar-chart-o"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product #3 Ends -->
+      <!-- Product #4 Starts -->
+      <div class="col-md-3 col-sm-6">
+        <div class="product-col">
+          <div class="image">
+            <img
+              src="images/product-images/formula/Similac_5g.jpg"
+              alt="product"
+              class="img-fluid"
+            />
+          </div>
+          <div class="caption">
+            <div class="price">
+              <span class="price-new">$24.10</span>
+              <span class="price-old">$25.73</span>
+            </div>
+
+            <h4><a href="product.html">PediaSure </a></h4>
+            <div class="ratings">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <span><a href="#">1 review(s)</a></span>
+            </div>
+            <div class="cart-button button-group">
+              <button type="button" class="btn btn-cart">
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+              <button type="button" title="Wishlist" class="btn btn-wishlist">
+                <i class="fa fa-heart"></i>
+              </button>
+              <button type="button" title="Compare" class="btn btn-compare">
+                <i class="fa fa-bar-chart-o"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product #4 Ends -->
+    </div>
+    <!-- Products Row Ends -->
+  </div>
+  <!-- Related Products Ends -->
+</div>
+<!-- Main Container Ends -->
