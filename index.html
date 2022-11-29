@@ -26,14 +26,22 @@
 		<script src="./js/angular.min.js"></script>
     	<script src="./js/angular-route.js"></script>
 		
+		
+
 	</head>
-	<body ng-app="mainApp">
-	
+	<body class="preloading" ng-app="mainApp">
+	<!--Loading Starts-->
+<div class="load">
+	<img src="../images/Loading/Baby.gif">
+</div>
+<!--Loading ends-->
+
+
 	<!-- Header Section Starts -->
 		<header class="header-area">
 		<!-- Header Top Starts -->
 							
-			</div>
+			
 		<!-- Header Top Ends -->
 		<!-- Main Header Starts -->
 			<div class="main-header">
@@ -216,7 +224,11 @@
 		<!-- Copyright Area Ends -->
 		</footer>
 	<!-- Footer Section Ends -->  
-	
+
+
+
+
+
 	  <script>
 		var app = angular.module("mainApp", ["ngRoute"]);
 		app.config(function ($routeProvider) {
@@ -239,6 +251,11 @@
 			.when("/register", { templateUrl: "register.html" })
 			.when("/cart", { templateUrl: "cart.html" });
 		});
+
+
+
+
+
 		</script>
 	<!-- Template JS Files -->
 	<script src="./js/jquery-3.3.1.min.js"></script>
@@ -248,5 +265,9 @@
 	<script src="./js/owl.carousel.min.js"></script>
 	<script src="./js/custom.js"></script>	
 	<script src="./js/swiper-bundle.min.js"></script>
+	<!--Loading js-->
+	<script  src="../js/loading.js"></script>
+	<script  src="../js/jquery-3.3.1.min.js"></script>
 	</body>
+
 </html>
