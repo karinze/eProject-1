@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Fruit Me Up Peach Juice",
       "brand": "Andros",
       "category": "Baby Food",
@@ -10,7 +10,7 @@
       "imgSrc": "/images/product-images/babyfood/1.png"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Fruit Me Up Strawberry Juice",
       "brand": "Andros",
       "category": "Baby Food",
@@ -19,7 +19,7 @@
       "imgSrc": "/images/product-images/babyfood/2.png"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Milk Aptakid",
       "brand": "Aptamil",
       "category": "Formula",
@@ -28,7 +28,7 @@
       "imgSrc": "/images/product-images/formula/aptamil-formula1-1.jpg"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Pumpkin noodles for baby",
       "brand": "Anpaso",
       "category": "Baby Food",
@@ -37,7 +37,7 @@
       "imgSrc": "/images/product-images/babyfood/Pumpkin-noodles-for baby-food-anpaso.png"
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Ivenet - Snack Cheese Banana Flavor",
       "brand": "IVENET",
       "category": "Baby Food",
@@ -46,7 +46,7 @@
       "imgSrc": "/images/product-images/babyfood/pho-mai-an-dam-ivenet-vi-chuoi.png"
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Cheese with nuts nutrition - QBB",
       "brand": "QBB",
       "category": "Baby Food",
@@ -55,7 +55,7 @@
       "imgSrc": "/images/product-images/babyfood/pho-mai-cho-be-cac-loai-hat-dinh-duong-qbb-90g.png"
     },
     {
-      "id": "7",
+      "id": 7,
       "name": "Ivenet - Cheese",
       "brand": "Ivenet",
       "category": "Baby Food",
@@ -64,7 +64,7 @@
       "imgSrc": "/images/product-images/babyfood/pho-mai-cho-be-ivenet.png"
     },
     {
-      "id": "8",
+      "id": 8,
       "name": "HOFF whey",
       "brand": "HOff",
       "category": "Baby Food",
@@ -73,7 +73,7 @@
       "imgSrc": "/images/product-images/babyfood/vang-sua-hff-hat-de.png"
     },
     {
-      "id": "9",
+      "id": 9,
       "name": "Nutritional oil for children - Kiddy",
       "brand": "Kiddy",
       "category": "Baby Food",
@@ -82,7 +82,7 @@
       "imgSrc": "/images/product-images/babyfood/dau-an-dinh-duong-cho-tre-nhan-hieu-kiddy.png"
     },
     {
-      "id": "10",
+      "id": 10,
       "name": "Kiddy's Nutritional Olive Oil for Children",
       "brand": "Kiddy",
       "category": "Baby Food",
@@ -91,7 +91,7 @@
       "imgSrc": "/images/product-images/babyfood/dau-o-liu-dinh-duong-cho-tre-em-nhan-hieu-kiddy-250-ml.png"
     },
     {
-      "id": "11",
+      "id": 11,
       "name": "Borub herbal baby bath",
       "brand": "3M Pharma",
       "category": "Body Care",
@@ -100,7 +100,7 @@
       "imgSrc": "/images/product-images/bodycare/Borub_HerbalShampoo250ml.png"
     },
     {
-      "id": "12",
+      "id": 12,
       "name": "Purite Rose Shower Gel",
       "brand": "Purité",
       "category": "Body Care",
@@ -109,7 +109,7 @@
       "imgSrc": "/images/product-images/bodycare/Purite_BodyWashRose.png"
     },
     {
-      "id": "13",
+      "id": 13,
       "name": "Purite Cherry Shower Gel",
       "brand": "Purité",
       "category": "Body Care",
@@ -118,7 +118,7 @@
       "imgSrc": "/images/product-images/bodycare/Purite_BodyWashOrange.png"
     },
     {
-      "id": "14",
+      "id": 14,
       "name": "Cetaphil Chamomile Baby Shower Gel",
       "brand": "Cetaphil",
       "category": "Body Care",
@@ -127,7 +127,7 @@
       "imgSrc": "/images/product-images/bodycare/Cetaphil Chamomile Baby Shower Gel-400ml.jpg"
     },
     {
-      "id": "15",
+      "id": 15,
       "name": "Lactacyd Baby Extra Milky Shower Gel",
       "brand": "Lactacyd",
       "category": "Body Care",
@@ -136,7 +136,7 @@
       "imgSrc": "/images/product-images/bodycare/Lactacyd Baby Extra Milky Shower Gel.jpg"
     },
     {
-      "id": "16",
+      "id": 16,
       "name": "Combo 2 packs of Whito pants diapers",
       "brand": "Whito",
       "category": "Diapers",
@@ -145,7 +145,7 @@
       "imgSrc": "/images/product-images/diapers/diapers (1).png"
     },
     {
-      "id": "17",
+      "id": 17,
       "name": "Combo 2 packs of Whito diapers",
       "brand": "Whito",
       "category": "Diapers",
@@ -154,7 +154,7 @@
       "imgSrc": "/images/product-images/diapers/diapers (2).png"
     },
     {
-      "id": "18",
+      "id": 18,
       "name": "Combo 2 packs of Genki Diapers",
       "brand": "Genki",
       "category": "Diapers",
@@ -163,7 +163,7 @@
       "imgSrc": "/images/product-images/diapers/diapers (3).png"
     },
     {
-      "id": "19",
+      "id": 19,
       "name": "Combo 2 packs of Huggies Platinum Nature Made diapers and pants",
       "brand": "Huggies",
       "category": "Diapers",
@@ -172,7 +172,7 @@
       "imgSrc": "/images/product-images/diapers/diapers (4).png"
     },
     {
-      "id": "20",
+      "id": 20,
       "name": "Bobby Pants Diapers",
       "brand": "Bobby",
       "category": "Diapers",
@@ -181,7 +181,7 @@
       "imgSrc": "/images/product-images/diapers/diapers (5).png"
     },
     {
-      "id": "21",
+      "id": 21,
       "name": "Enfant softener",
       "brand": "Enfant",
       "category": "Softeners",
@@ -190,7 +190,7 @@
       "imgSrc": "/images/product-images/softeners/Enfant_Softener.jpg"
     },
     {
-      "id": "22",
+      "id": 22,
       "name": "Enfant Tropical laundry detergent",
       "brand": "Enfant",
       "category": "Softeners",
@@ -199,7 +199,7 @@
       "imgSrc": "/images/product-images/softeners/Enfant_TropicalGarden.png"
     },
     {
-      "id": "23",
+      "id": 23,
       "name": "Korean laundry detergent Animo",
       "brand": "Animo",
       "category": "Softeners",
@@ -208,7 +208,7 @@
       "imgSrc": "/images/product-images/softeners/Korean laundry detergent Animo.jpg"
     },
     {
-      "id": "24",
+      "id": 24,
       "name": "Korean laundry detergent AGA-ae",
       "brand": "Aga-ae",
       "category": "Softeners",
@@ -217,7 +217,7 @@
       "imgSrc": "/images/product-images/softeners/Korean laundry detergent AGA-ae.jpg"
     },
     {
-      "id": "25",
+      "id": 25,
       "name": "Ariel laundry detergent Downy flavor",
       "brand": "Ariel",
       "category": "Softeners",
@@ -226,7 +226,7 @@
       "imgSrc": "/images/product-images/softeners/Ariel laundry detergent Downy flavor.jpg"
     },
     {
-      "id": "26",
+      "id": 26,
       "name": "Mesh bag with 6 soft balls",
       "brand": "Toycity",
       "category": "Toys",
@@ -235,7 +235,7 @@
       "imgSrc": "/images/product-images/toys/ball-1.png"
     },
     {
-      "id": "27",
+      "id": 27,
       "name": "Soft ball 8' funny smiley face",
       "brand": "Toycity",
       "category": "Toys",
@@ -244,7 +244,7 @@
       "imgSrc": "/images/product-images/toys/ball-6.png"
     },
     {
-      "id": "28",
+      "id": 28,
       "name": "Set of 4' softballs and numbers",
       "brand": "Toycity",
       "category": "Toys",
@@ -253,7 +253,7 @@
       "imgSrc": "/images/product-images/toys/ball-7.jpg"
     },
     {
-      "id": "29",
+      "id": 29,
       "name": "Bioplastics Geng Feng Ambulance",
       "brand": "GENG FENG",
       "category": "Toys",
@@ -262,7 +262,7 @@
       "imgSrc": "/images/product-images/toys/boy-ambulance.png"
     },
     {
-      "id": "30",
+      "id": 30,
       "name": "Dinosaur valley canvas bag",
       "brand": "Other brands",
       "category": "Toys",
@@ -271,7 +271,7 @@
       "imgSrc": "/images/product-images/toys/boy-dinosaur.png"
     },
     {
-      "id": "31",
+      "id": 31,
       "name": "Bioplastics Geng Feng Fire Truck",
       "brand": "Geng Feng",
       "category": "Toys",
@@ -280,7 +280,7 @@
       "imgSrc": "/images/product-images/toys/boy-firetruck.png"
     },
     {
-      "id": "32",
+      "id": 32,
       "name": "Small block basic jigsaw",
       "brand": "Cresta",
       "category": "Toys",
@@ -289,7 +289,7 @@
       "imgSrc": "/images/product-images/toys/boy-lego.png"
     },
     {
-      "id": "33",
+      "id": 33,
       "name": "The rickshaw pulls the little rhinoceros",
       "brand": "OKKD",
       "category": "Toys",
@@ -298,7 +298,7 @@
       "imgSrc": "/images/product-images/toys/boy-rhino.png"
     },
     {
-      "id": "34",
+      "id": 34,
       "name": "Aircraft assembly kit",
       "brand": "CUTE KOALA ",
       "category": "Toys",
@@ -307,7 +307,7 @@
       "imgSrc": "/images/product-images/toys/boy-setblock.png"
     },
     {
-      "id": "35",
+      "id": 35,
       "name": "turtle toy car",
       "brand": "Other brands",
       "category": "Toys",
@@ -316,7 +316,7 @@
       "imgSrc": "/images/product-images/toys/boy-turtle.png"
     },
     {
-      "id": "36",
+      "id": 36,
       "name": "combo 2 cans of Aptakid milk",
       "brand": "Aptakid",
       "category": "Formula",
@@ -325,7 +325,7 @@
       "imgSrc": "/images/product-images/formula/formula2.jpg"
     },
     {
-      "id": "37",
+      "id": 37,
       "name": "Meiji Infant Milk",
       "brand": "Meiji",
       "category": "Formula",
@@ -334,7 +334,7 @@
       "imgSrc": "/images/product-images/formula/formula4.jpg"
     },
     {
-      "id": "38",
+      "id": 38,
       "name": "Vinamilk Optimum Gold",
       "brand": "Optimum Gold",
       "category": "Formula",
@@ -343,7 +343,7 @@
       "imgSrc": "/images/product-images/formula/formula5.jpg"
     },
     {
-      "id": "39",
+      "id": 39,
       "name": "Enfagrow A+ Gentle Care Milk",
       "brand": "Enfa",
       "category": "Formula",
@@ -352,7 +352,7 @@
       "imgSrc": "/images/product-images/formula/formula6.jpg"
     },
     {
-      "id": "40",
+      "id": 40,
       "name": "Abbott Grow Gold Milk 3+",
       "brand": "ABBOTT",
       "category": "Formula",
@@ -361,7 +361,7 @@
       "imgSrc": "/images/product-images/formula/formula7.jpg"
     },
     {
-      "id": "41",
+      "id": 41,
       "name": "Probiotic 10 strains BioAmicus Complete",
       "brand": "BioAmicus",
       "category": "Vitamins",
@@ -370,7 +370,7 @@
       "imgSrc": "/images/product-images/vitamins/bioamicus-complete.png"
     },
     {
-      "id": "42",
+      "id": 42,
       "name": "Bio-acimin microbial nuggets",
       "brand": "Bio-acimin",
       "category": "Vitamins",
@@ -379,7 +379,7 @@
       "imgSrc": "/images/product-images/vitamins/com-bio-acimin-fiber.png"
     },
     {
-      "id": "43",
+      "id": 43,
       "name": "Probeeotic microbial nuggets",
       "brand": "DK Pharma",
       "category": "Vitamins",
@@ -388,7 +388,7 @@
       "imgSrc": "/images/product-images/vitamins/com-vi-sinh-probeeotic.png"
     },
     {
-      "id": "44",
+      "id": 44,
       "name": "Natural delicious syrup for babies - Fitobimbi Appetito",
       "brand": "Fitobimbi",
       "category": "Vitamins",
@@ -397,7 +397,7 @@
       "imgSrc": "/images/product-images/vitamins/fitobimbi-appetito.png"
     },
     {
-      "id": "45",
+      "id": 45,
       "name": "Probiotic spores - LiveSpo Clausy",
       "brand": "LiveSpo",
       "category": "Vitamins",
