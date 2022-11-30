@@ -1,4 +1,4 @@
 $(window).on('load',function(event){
     $('body').removeClass('loadingbaby');
-    $('.load').delay(2000).fadeOut('slow');
+    $('.load').delay(2100).fadeOut('slow');
 });
