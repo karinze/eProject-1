@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="mainApp">
 	<head>
-		<base href="/">
+
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="">
@@ -268,7 +268,6 @@
 		app.config(function ($routeProvider) {
 		  $routeProvider
 			.when("/", { templateUrl: "main.html" })
-			.when("/404", {templateUrl: "404.html"})
 			.when("/about", { templateUrl: "about.html" })
 			.when("/product-1", { templateUrl: "product-full.html" })
 			.when("/babycare", { templateUrl: "babycare.html" })
@@ -281,33 +280,18 @@
 			.when("/compare", { templateUrl: "compare.html" })
 			.when("/franchise", { templateUrl: "franchise.html" })
 			.when("/resources", { templateUrl: "resources.html" })
-			.when("/category-grid", { templateUrl: "category-grid.html", controller: 'productsListController' })
+			.when("/category-grid", { templateUrl: "category-grid.html" })
 			.when("/login", { templateUrl: "login.html" })
 			.when("/register", { templateUrl: "register.html" })
 			.when("/contact", { templateUrl: "contact.html" })
-			.when("/cart", { templateUrl: "cart.html" })
-			.when("/category-grid/:id", { templateUrl: "product-full.html", controller: 'singleProductController'});
+			.when("/cart", { templateUrl: "cart.html" });
 		});
-	
-		app.controller("productsListController", function ($scope, $http, $routeParams) {
+
+		app.controller("productsListController", function ($scope, $http) {
         $http.get("./js/products.json").then(function (response) {
           $scope.myData = response.data.products;
           $scope.products = {};
-		  
         });
-		app.controller("singleProductController",['$scope', '$routeParams', function ($scope, $http, $locationProvider, $routeParams) {
-			$http.get("./js/products.json").then(function (response) {
-				$scope.productData = response.data.products;
-				$scope.products = {};
-				$scope.products.id = $route.current.params.id;
-			})
-		}]);
-
-		// app.controller("productSingleController", function ($scope, $http) {
-        // $http.get("./js/products.json").then(function (response) {
-        //   $scope.myData = response.data.[];
-        //   $scope.products = {};
-        // });
       });
 
 

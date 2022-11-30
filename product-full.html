@@ -1,15 +1,10 @@
 <!-- Main Container Starts -->
-<div
-  id="main-container"
-  class="container px-md-0"
-  ngLet*="let product in myData"
-  ng-controller="singleProductController  "
->
+<div id="main-container" class="container px-md-0">
   <!-- Breadcrumb Starts -->
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="#/!">Home</a></li>
-      <li class="breadcrumb-item"><a href="#!category-grid">Category</a></li>
+      <li class="breadcrumb-item"><a href="#!category-list">Category</a></li>
       <li class="breadcrumb-item active" aria-current="page">Product</li>
     </ol>
   </nav>
@@ -71,19 +66,13 @@
     <div class="col-sm-8 product-details">
       <div class="panel-smart">
         <!-- Product Name Starts -->
-        <h2
-          ng:repeat="product in myList"
-          ng-selected="product.id == products.id"
-          value="{{product.id}}"
-        >
-          MILK APTAKID {{product.name}}
-        </h2>
+        <h2>MILK APTAKID {{name}}</h2>
         <!-- Product Name Ends -->
         <hr />
         <!-- Manufacturer Starts -->
         <ul class="list-unstyled manufacturer">
-          <li><span>Brand:</span> Aptamil {{product.brand}}</li>
-          <li><span>Made in:</span> New Zealand {{product.madeIn}}</li>
+          <li><span>Brand:</span> Aptamil {{brand}}</li>
+          <li><span>Made in:</span> New Zealand {{madeIn}}</li>
           <li></li>
         </ul>
         <!-- Manufacturer Ends -->
@@ -91,7 +80,7 @@
         <!-- Price Starts -->
         <div class="price">
           <span class="price-head">Price :</span>
-          <span class="price-new">$ {{product.price}}</span>
+          <span class="price-new">$43.77 {{price}}</span>
         </div>
         <!-- Price Ends -->
         <hr />
