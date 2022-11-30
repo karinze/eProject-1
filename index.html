@@ -270,11 +270,6 @@
 			.when("/404", {templateUrl: "404.html"})
 			.when("/about", { templateUrl: "about.html" })
 			.when("/product-1", { templateUrl: "product-full.html" })
-			.when("/babycare", { templateUrl: "babycare.html" })
-			.when("/fashion", { templateUrl: "fashion.html" })
-			.when("/toys", { templateUrl: "toys.html" })
-			.when("/wellnesshygiene", { templateUrl: "wellness.html" })
-			.when("/brands", { templateUrl: "brands.html" })
 			.when("/stores", { templateUrl: "stores.html" })
 			.when("/news", { templateUrl: "news.html" })
 			.when("/compare", { templateUrl: "compare.html" })
@@ -294,11 +289,11 @@
           $scope.products = {};
 		  
         });
-		app.controller("singleProductController",['$scope', '$routeParams', function ($scope, $http, $locationProvider, $routeParams) {
+		app.controller("singleProductController" ,['$scope', '$routeParams', function ($scope, $http, $locationProvider, $routeParams) {
 			$http.get("./js/products.json").then(function (response) {
 				$scope.productData = response.data.products;
 				$scope.products = {};
-				$scope.products.id = $route.current.params.id;
+				$scope.products.id = $routeParams.id;
 			})
 		}]);
 
