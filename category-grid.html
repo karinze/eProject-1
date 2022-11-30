@@ -1,12 +1,14 @@
 <!-- Main Container Starts -->
-<div id="main-container" class="container px-md-0">
+<div
+  id="main-container"
+  ng-controller="productsListController"
+  class="container px-md-0"
+>
   <!-- Breadcrumb Starts -->
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="..">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">
-        Category (Grid)
-      </li>
+      <li class="breadcrumb-item active" aria-current="page">Products List</li>
     </ol>
   </nav>
   <!-- Breadcrumb Ends -->
@@ -15,7 +17,7 @@
     <!-- Primary Content Starts -->
     <div class="col-md-12 col-sm-12">
       <!-- Main Heading Starts -->
-      <h2 class="main-heading2 page-title">Formula {{category}}</h2>
+      <!-- <h2 class="main-heading2 page-title">Formula {{products.category}}</h2> -->
       <!-- Main Heading Ends -->
       <div class="input-group mb-3">
         <input
@@ -26,22 +28,26 @@
       </div>
 
       <!-- Product Grid Display Starts -->
-      <div class="row">
+      <div class="row product-list">
         <!-- Product Starts -->
-        <div class="col-lg-3 col-md-6 col-sm-12 list">
+        <div
+          class="col-lg-3 col-md-6 col-sm-12 list"
+          ng-repeat="x in myData | filter: search | filter: products.stock"
+        >
           <div class="product-col">
             <div class="image">
               <img
-                src="images/product-images/formula/formula2.jpg"
+                src="images/product-images/{}"
                 alt="product"
                 class="img-responsive"
+                ngFor="let img of dataSource.hotdeals"
               />
             </div>
             <div class="caption">
               <div class="price">
-                <span class="price-new">$199.50</span>
+                <span class="price-new">{{x.price}}</span>
               </div>
-              <h4><a href="#!product-1">Milk Aptakid </a></h4>
+              <h4><a href="#!product-1">{{x.name}}</a></h4>
               <div class="ratings">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>

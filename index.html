@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="mainApp">
 	<head>
 
 		<meta charset="utf-8">
@@ -25,6 +25,7 @@
 		<!-- Angular Import -->
 		<script src="./js/angular.min.js"></script>
     	<script src="./js/angular-route.js"></script>
+
 		
 		
 
@@ -229,7 +230,40 @@
 
 
 
-	  <script>
+	  
+	<!-- Template JS Files -->
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/popper.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/jquery.magnific-popup.min.js"></script>
+	<script src="./js/owl.carousel.min.js"></script>
+	<script src="./js/custom.js"></script>	
+	<script src="./js/swiper-bundle.min.js"></script>
+	<script src="./js/list.min.js"></script>
+	<script src="./js/app.js"></script>
+	<!--Loading js-->
+	<script>
+		
+	</script>
+	<script src="./js/loading.js"></script>
+	<script>
+		$.getJSON("products.json", function (json) {
+			var productArray = [];
+			for (var key in json) {
+			if (json.hasOwnProperty(key)) {
+				var item = json[key];
+				productArray.push({
+				id: item.id,
+				name: item.name,
+				brand: item.brand,
+				category: item.category,
+				madeIn: item.madeIn,
+				price: item.price,
+				imgSrc: item.imgSrc,
+				});
+			}
+			}
+		});
 		var app = angular.module("mainApp", ["ngRoute"]);
 		app.config(function ($routeProvider) {
 		  $routeProvider
@@ -253,21 +287,16 @@
 			.when("/cart", { templateUrl: "cart.html" });
 		});
 
-
+		app.controller("productsListController", function ($scope, $http) {
+        $http.get("./js/products.json").then(function (response) {
+          $scope.myData = response.data.products;
+          $scope.products = {};
+        });
+      });
 
 
 
 		</script>
-	<!-- Template JS Files -->
-	<script src="./js/jquery-3.3.1.min.js"></script>
-	<script src="./js/popper.min.js"></script>
-	<script src="./js/bootstrap.min.js"></script>
-	<script src="./js/jquery.magnific-popup.min.js"></script>
-	<script src="./js/owl.carousel.min.js"></script>
-	<script src="./js/custom.js"></script>	
-	<script src="./js/swiper-bundle.min.js"></script>
-	<!--Loading js-->
-	<script src="./js/loading.js"></script>
 	</body>
 
 </html>
