@@ -88,7 +88,7 @@
       "category": "Baby Food",
       "madeIn": "Singapore",
       "price": 10.25,
-      "imgSrc": "/images/product-images/babyfood/dau-o-liu-dinh-duong-cho-tre-em-nhan-hieu-kiddy-250-ml.png"
+      "imgSrc": "/images/product-images/babyfood/dau-o-liu-dinh-duong-cho-tre-em-nhan-hieu-kiddy-250-ml.jpg"
     },
     {
       "id": 11,
@@ -97,7 +97,7 @@
       "category": "Body Care",
       "madeIn": "Viet Nam",
       "price": 10.25,
-      "imgSrc": "/images/product-images/bodycare/Borub_HerbalShampoo250ml.png"
+      "imgSrc": "/images/product-images/bodycare/Borub_HerbalShampoo250ml.webp"
     },
     {
       "id": 12,
@@ -106,7 +106,7 @@
       "category": "Body Care",
       "madeIn": "France",
       "price": 10.25,
-      "imgSrc": "/images/product-images/bodycare/Purite_BodyWashRose.png"
+      "imgSrc": "/images/product-images/bodycare/PURITE BODY WASH3.jpg"
     },
     {
       "id": 13,
@@ -115,7 +115,7 @@
       "category": "Body Care",
       "madeIn": "France",
       "price": 10.25,
-      "imgSrc": "/images/product-images/bodycare/Purite_BodyWashOrange.png"
+      "imgSrc": "/images/product-images/bodycare/PURITE BODY WASH1.jpg"
     },
     {
       "id": 14,
@@ -142,7 +142,7 @@
       "category": "Diapers",
       "madeIn": "Japan",
       "price": 10.25,
-      "imgSrc": "/images/product-images/diapers/diapers (1).png"
+      "imgSrc": "/images/product-images/diapers/diapers (1).jpg"
     },
     {
       "id": 17,
@@ -151,7 +151,7 @@
       "category": "Diapers",
       "madeIn": "Japan",
       "price": 10.25,
-      "imgSrc": "/images/product-images/diapers/diapers (2).png"
+      "imgSrc": "/images/product-images/diapers/diapers (2).jpg"
     },
     {
       "id": 18,
@@ -160,7 +160,7 @@
       "category": "Diapers",
       "madeIn": "Japan",
       "price": 10.25,
-      "imgSrc": "/images/product-images/diapers/diapers (3).png"
+      "imgSrc": "/images/product-images/diapers/diapers (3).jpg"
     },
     {
       "id": 19,
@@ -169,7 +169,7 @@
       "category": "Diapers",
       "madeIn": "China",
       "price": 10.25,
-      "imgSrc": "/images/product-images/diapers/diapers (4).png"
+      "imgSrc": "/images/product-images/diapers/diapers (4).jpg"
     },
     {
       "id": 20,
@@ -178,7 +178,7 @@
       "category": "Diapers",
       "madeIn": "Japan",
       "price": 10.25,
-      "imgSrc": "/images/product-images/diapers/diapers (5).png"
+      "imgSrc": "/images/product-images/diapers/diapers.png"
     },
     {
       "id": 21,
@@ -196,7 +196,7 @@
       "category": "Softeners",
       "madeIn": "Thailand",
       "price": 10.25,
-      "imgSrc": "/images/product-images/softeners/Enfant_TropicalGarden.png"
+      "imgSrc": "/images/product-images/softeners/Enfant_TropicalGarden.webp"
     },
     {
       "id": 23,
