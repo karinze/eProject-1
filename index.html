@@ -1,312 +1,384 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="mainApp">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="">
-		<meta name="author" content="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-		<title>TinyTots</title>
+        <title>TinyTots</title>
 
-		<!-- Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link
+        href="css/bootstrap.min.css" rel="stylesheet">
 
-		<!-- Google Web Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+        <!-- Google Web Fonts -->
+        <link
+        href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
 
-		<!-- Template CSS Files  -->
-		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-		<link href="css/magnific-popup.css" rel="stylesheet">
-		<link href="css/owl.carousel.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
-		<link href="css/responsive.css" rel="stylesheet">
-		<link rel="stylesheet" href="css/swiper-bundle.min.css">
-		<!-- Angular Import -->
-		<script src="./js/angular.min.js"></script>
-    	<script src="./js/angular-route.js"></script>
-
-		
-		
-
-	</head>
-	<body class="preloading" ng-app="mainApp">
-	<!--Loading Starts-->
-<div class="load">
-	<img src="images/Loading/0.gif">
-</div>
-<!--Loading ends-->
+        <!-- Template CSS Files  -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/magnific-popup.css" rel="stylesheet">
+        <link href="css/owl.carousel.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
+        <link
+        rel="stylesheet" href="css/swiper-bundle.min.css">
+        <!-- Angular Import -->
+        <script src="./js/angular.min.js"></script>
+        <script src="./js/angular-route.js"></script>
 
 
-	<!-- Header Section Starts -->
-		<header class="header-area">
-		<!-- Header Top Starts -->
-							
-			
-		<!-- Header Top Ends -->
-		<!-- Main Header Starts -->
-			<div class="main-header">
-			<!-- Nested Container Starts -->
-				<div class="container px-md-0">
-				<!-- Nested Row Starts -->
-					<div class="row">
-					<!-- Logo Starts -->
-						<div class="col-lg-2 col-md-4 col-sm-12 text-center">
-							<div id="logo">
-								<a href="#/!"><img src="images/logo.png" title="" alt="" class="img-fluid img-center"></a>
-							</div>
-						</div>
-					<!-- Logo Ends -->
-					<!-- Search Starts -->
-						<div class="col-lg-8 col-md-4 col-sm-12 d-flex flex-fill align-items-center justify-content-evenly">
-							<nav id="main-menu" class=" navbar navbar-expand-md rounded-0">
-								<!-- Nested Container Starts -->
-									<div class="container px-md-0">
-									<!-- Navbar Toggler Starts -->
-										<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target=".navbar-cat-collapse" aria-controls=".navbar-cat-collapse" aria-expanded="false" aria-badge="Toggle navigation">
-											<span class="navbar-toggler-icon fa fa-bars"></span>
-										</button>
-									<!-- Navbar Toggler Ends -->
-									<!-- Navbar Cat collapse Starts -->
-										<div class="collapse navbar-collapse navbar-cat-collapse">
-											<ul class="nav navbar-nav justify-content-between">
-												<li class="nav-item"><a href="#/!" class="nav-link">Home</a></li>
-												<li class="nav-item"><a href="#!about" class="nav-link">About Us</a></li>
-												<li class="nav-item dropdown"><a href="#!category-grid" class="nav-link dropdown-toggle" data-toggle="dropdown">
-														Products
-													</a>
-													<div class="dropdown-menu rounded-0">
-														<a href="#!category-grid" class="dropdown-item">Baby care</a>
-														<a href="#!category-grid" class="dropdown-item">Fashion</a>
-														<a href="#!category-grid" class="dropdown-item">Toys</a> 
-														<a href="#!category-grid" class="dropdown-item">Wellness & Hygiene</a> 
-													</div>
-												</li>
-											
-												<li class="nav-item"><a href="#!news" class="nav-link">News</a></li>
-												<li class="nav-item"><a href="#!contact" class="nav-link">Contact us</a></li>
-												
-											</ul>
-										</div>
-									<!-- Navbar Cat collapse Ends -->
-									</div>
-								<!-- Nested Container Ends -->
-								</nav>
-						</div>
-					<!-- Search Ends -->
-					<!-- Cart Starts -->
-					<div class="col-lg-2 col-md-4 col-sm-12 d-flex justify-content-center">
-						<a href="#!cart" id="cart" class="btn-group btn-block">
-							<button type="button" class="btn btn-block btn-lg dropdown-toggle text-uppercase text-md-right">
-								<i class="fa fa-shopping-cart"></i>
-								<strong class="d-none d-lg-inline-block">Shopping Cart</strong> 
-								<span id="cart-total">2 Items</span>
-								<i class="fa fa-angle-down"></i>
-							</button>
-
-						</a>
-					</div>
-				<!-- Cart Ends -->
-					</div>
-				<!-- Nested Row Ends -->
-				</div>
-			<!-- Nested Container Ends -->
-			</div>
-		<!-- Main Header Ends -->
-		</header>
-	<!-- Header Section Ends -->
-	<!-- Main Menu Starts -->
-		
-	<!-- Main Menu Ends -->
-
-	<!--View starts DO NOT TOUCH PLEASE-->
-		<div ng-view></div>
-	  
-	<!-- Footer Section Starts -->
-		<footer id="footer-area">
-		<!-- Footer Links Starts -->
-			<div class="footer-links">
-			<!-- Container Starts -->
-				<div class="container px-md-0">
-				<!-- Nested Row Starts -->
-					<div class="row">
-					<!-- Foot Col#1 Starts -->
-						<div class="col-md-4 col-sm-12">
-							<h5>Subscription</h5>
-							<div class="foot-subscription-form">
-								<div class="input-group d-flex align-items-center justify-content-center">
-								<input type="text" class="form-control text-uppercase" placeholder="Your Email Address">
-								<span class="input-group-btn">
-									<button class="btn text-uppercase" type="button">
-										Subscribe
-									</button>
-								</span>
-								</div>
-							</div>
-							<h5>Stay Connected</h5>
-							<!-- Don't touch this -->
-							<ul class="list-unstyled list-inline foot-sm-links">
-								<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-								<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-							</ul>
-						</div>
-					<!-- Foot Col#1 Ends -->
-					<!-- Customer Service Starts -->
-						<!-- <div class="col-md-2 col-sm-4 col-12">
-							<h5>Customer Service</h5>
-							<ul>
-								<li><a href="#!contact">Contact Us</a></li>
-								<li><a href="#">Returns</a></li>
-								<li><a href="#">Site Map</a></li>
-								<li><a href="#">Affiliates</a></li>
-								<li><a href="#">Specials</a></li>
-								<li><a href="#!faqs" >FAQs</a></li>
-							</ul>
-						</div> -->
-					<!-- Customer Service Ends -->
-					<!-- Contact Us Starts -->
-						<div class="col-md-4 col-sm-4 col-12 last">
-							<h5>Contact Us</h5>
-							<ul>
-								
-								<li>TinyTots</li>
-								<li>
-									1247 LB Nagar Road, Hyderabad, Telangana - 35
-								</li>
-								<li>
-									Email: <a href="mailto:someone@example.com">info@demolink.com</a>
-								</li>
-								<li>
-									Tel: <strong>1(234) 567-9842</strong>
-								</li>								
-							</ul>
-						</div>
-					<!-- Contact Us Ends -->
-					</div>
-				<!-- Nested Row Ends -->
-				</div>
-			<!-- Container Ends -->
-			</div>
-		<!-- Footer Links Ends -->
-		<!-- Copyright Area Starts -->
-			<div class="copyright clearfix">
-			<!-- Container Starts -->
-				<div class="container px-md-0 text-center text-md-left">
-				<!-- Starts -->
-					<p class="float-md-left">
-						&copy; 2022 TinyTots Retail Corporated</a>
-					</p>
-				<!-- Ends -->
-				<!-- Payment Gateway Links Starts -->
-					<ul class="float-md-right list-inline">
-						<li class="list-inline-item"> 
-							<img src="images/payment-icon/cirrus.png" alt="PaymentGateway" />
-						</li>
-						<li class="list-inline-item"> 
-							<img src="images/payment-icon/paypal.png" alt="PaymentGateway" />
-						</li>
-						<li class="list-inline-item"> 
-							<img src="images/payment-icon/visa.png" alt="PaymentGateway" />
-						</li>
-						<li class="list-inline-item"> 
-							<img src="images/payment-icon/mastercard.png" alt="PaymentGateway" />
-						</li>
-						<li class="list-inline-item"> 
-							<img src="images/payment-icon/americanexpress.png" alt="PaymentGateway" />
-						</li>
-					</ul>
-				<!-- Payment Gateway Links Ends -->
-				</div>
-			<!-- Container Ends -->
-			</div>
-		<!-- Copyright Area Ends -->
-		</footer>
-	<!-- Footer Section Ends -->  
+    </head>
+    <body
+        class="preloading" ng-app="mainApp">
+        <!--Loading Starts-->
+        <div class="load">
+            <img src="images/Loading/0.gif">
+        </div>
+        <!--Loading ends-->
 
 
+        <!-- Header Section Starts -->
+        <header class="header-area">
+            <!-- Header Top Starts -->
 
 
+            <!-- Header Top Ends -->
+            <!-- Main Header Starts -->
+                <div
+                class="main-header"> <!-- Nested Container Starts -->
+                <div
+                    class="container px-md-0">
+                    <!-- Nested Row Starts -->
+                    <div
+                        class="row">
+                        <!-- Logo Starts -->
+                        <div class="col-lg-2 col-md-4 col-sm-12 text-center">
+                            <div id="logo">
+                                <a href="#/!"><img src="images/logo.png" title="" alt="" class="img-fluid img-center"></a>
+                            </div>
+                        </div>
+                        <!-- Logo Ends -->
+                        <!-- Search Starts -->
+                        <div class="col-lg-8 col-md-4 col-sm-12 d-flex flex-fill align-items-center justify-content-evenly">
+                            <nav
+                                id="main-menu" class=" navbar navbar-expand-md rounded-0">
+                                <!-- Nested Container Starts -->
+                                <div
+                                    class="container px-md-0">
+                                    <!-- Navbar Toggler Starts -->
+                                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target=".navbar-cat-collapse" aria-controls=".navbar-cat-collapse" aria-expanded="false" aria-badge="Toggle navigation">
+                                        <span class="navbar-toggler-icon fa fa-bars"></span>
+                                    </button>
+                                    <!-- Navbar Toggler Ends -->
+                                    <!-- Navbar Cat collapse Starts -->
+                                    <div class="collapse navbar-collapse navbar-cat-collapse">
+                                        <ul class="nav navbar-nav justify-content-between">
+                                            <li class="nav-item">
+                                                <a href="#/!" class="nav-link">Home</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#!about" class="nav-link">About Us</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a href="#!category-grid" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                                    Products
+                                                </a>
+                                                <div class="dropdown-menu rounded-0">
+                                                    <a href="#!category-grid" class="dropdown-item">Baby care</a>
+                                                    <a href="#!category-grid" class="dropdown-item">Fashion</a>
+                                                    <a href="#!category-grid" class="dropdown-item">Toys</a>
+                                                    <a href="#!category-grid" class="dropdown-item">Wellness & Hygiene</a>
+                                                </div>
+                                            </li>
 
-	  
-	<!-- Template JS Files -->
-	<script src="./js/jquery-3.3.1.min.js"></script>
-	<script src="./js/popper.min.js"></script>
-	<script src="./js/bootstrap.min.js"></script>
-	<script src="./js/jquery.magnific-popup.min.js"></script>
-	<script src="./js/owl.carousel.min.js"></script>
-	<script src="./js/custom.js"></script>	
-	<script src="./js/swiper-bundle.min.js"></script>
-	<script src="./js/list.min.js"></script>
-	<script src="./js/app.js"></script>
-	<!--Loading js-->
-	<script>
-		
-	</script>
-	<script src="./js/loading.js"></script>
-	<script>
-		$.getJSON("products.json", function (json) {
-			var productArray = [];
-			for (var key in json) {
-			if (json.hasOwnProperty(key)) {
-				var item = json[key];
-				productArray.push({
-				id: item.id,
-				name: item.name,
-				brand: item.brand,
-				category: item.category,
-				madeIn: item.madeIn,
-				price: item.price,
-				imgSrc: item.imgSrc,
-				});
-			}
-			}
-		});
-		var app = angular.module("mainApp", ["ngRoute"]);
-		app.config(function ($routeProvider) {
-		  $routeProvider
-			.when("/", { templateUrl: "main.html" })
-			.when("/404", {templateUrl: "404.html"})
-			.when("/about", { templateUrl: "about.html" })
-			.when("/product-1", { templateUrl: "product-full.html" })
-			.when("/stores", { templateUrl: "stores.html" })
-			.when("/news", { templateUrl: "news.html" })
-			.when("/compare", { templateUrl: "compare.html" })
-			.when("/franchise", { templateUrl: "franchise.html" })
-			.when("/resources", { templateUrl: "resources.html" })
-			.when("/category-grid", { templateUrl: "category-grid.html", controller: 'productsListController' })
-			.when("/login", { templateUrl: "login.html" })
-			.when("/register", { templateUrl: "register.html" })
-			.when("/contact", { templateUrl: "contact.html" })
-			.when("/cart", { templateUrl: "cart.html" })
-			.when("/category-grid/:id", { templateUrl: "product-full.html", controller: 'singleProductController'});
-		});
+                                            <li class="nav-item">
+                                                <a href="#!news" class="nav-link">News</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#!contact" class="nav-link">Contact us</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <!-- Navbar Cat collapse Ends -->
+                                </div>
+                                <!-- Nested Container Ends -->
+                            </nav>
+                        </div>
+                        <!-- Search Ends -->
+                        <!-- Cart Starts -->
+                        <div class="col-lg-2 col-md-4 col-sm-12 d-flex justify-content-center">
+                            <a href="#!cart" id="cart" class="btn-group btn-block">
+                                <button type="button" class="btn btn-block btn-lg dropdown-toggle text-uppercase text-md-right">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <strong class="d-none d-lg-inline-block">Shopping Cart</strong>
+                                    <span id="cart-total">2 Items</span>
+                                    <i class="fa fa-angle-down"></i>
+                                </button>
+
+                            </a>
+                        </div>
+                        <!-- Cart Ends -->
+                    </div>
+                    <!-- Nested Row Ends -->
+                </div>
+                <!-- Nested Container Ends -->
+            </div>
+            <!-- Main Header Ends -->
+        </header>
+        <!-- Header Section Ends -->
+        <!-- Main Menu Starts -->
+
+        <!-- Main Menu Ends -->
+
+        <!--View starts DO NOT TOUCH PLEASE--><div ng-view> </div>
+
+        <!-- Footer Section Starts -->
+        <footer
+            id="footer-area">
+            <!-- Footer Links Starts -->
+            <div
+                class="footer-links">
+                <!-- Container Starts -->
+                <div
+                    class="container px-md-0">
+                    <!-- Nested Row Starts -->
+                    <div
+                        class="row">
+                        <!-- Foot Col#1 Starts -->
+                        <div class="col-md-4 col-sm-12">
+                            <h5>Subscription</h5>
+                            <div class="foot-subscription-form">
+                                <div class="input-group d-flex align-items-center justify-content-center">
+                                    <input type="text" class="form-control text-uppercase" placeholder="Your Email Address">
+                                    <span class="input-group-btn">
+                                        <button class="btn text-uppercase" type="button">
+                                            Subscribe
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <h5>Stay Connected</h5>
+                            <!-- Don't touch this -->
+                            <ul class="list-unstyled list-inline foot-sm-links">
+                                <li class="list-inline-item">
+                                    <a href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">
+                                        <i class="fa fa-pinterest"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Foot Col#1 Ends -->
+                        <!-- Customer Service Starts -->
+                        <!-- <div class="col-md-2 col-sm-4 col-12">
+                        							<h5>Customer Service</h5>
+                        							<ul>
+                        								<li><a href="#!contact">Contact Us</a></li>
+                        								<li><a href="#">Returns</a></li>
+                        								<li><a href="#">Site Map</a></li>
+                        								<li><a href="#">Affiliates</a></li>
+                        								<li><a href="#">Specials</a></li>
+                        								<li><a href="#!faqs" >FAQs</a></li>
+                        							</ul>
+                        						</div> -->
+                        <!-- Customer Service Ends -->
+                        <!-- Contact Us Starts -->
+                            <div class="col-md-4 col-sm-4 col-12 last"> <h5>Contact Us</h5>
+                            <ul>
+
+                                <li>TinyTots</li>
+                                <li>
+                                    1247 LB Nagar Road, Hyderabad, Telangana - 35
+                                </li>
+                                <li>
+                                    Email:
+                                    <a href="mailto:someone@example.com">info@demolink.com</a>
+                                </li>
+                                <li>
+                                    Tel:
+                                    <strong>1(234) 567-9842</strong>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Contact Us Ends -->
+                    </div>
+                    <!-- Nested Row Ends -->
+                </div>
+                <!-- Container Ends -->
+            </div>
+            <!-- Footer Links Ends -->
+            <!-- Copyright Area Starts -->
+            <div
+                class="copyright clearfix">
+                <!-- Container Starts -->
+                <div
+                    class="container px-md-0 text-center text-md-left">
+                    <!-- Starts -->
+                    <p class="float-md-left">&copy; 2022 TinyTots Retail Corporated
+                    </p>
+                </a>
+            </p>
+            <!-- Ends -->
+            <!-- Payment Gateway Links Starts -->
+            <ul class="float-md-right list-inline">
+                <li class="list-inline-item">
+                    <img src="images/payment-icon/cirrus.png" alt="PaymentGateway"/>
+                </li>
+                <li class="list-inline-item">
+                    <img src="images/payment-icon/paypal.png" alt="PaymentGateway"/>
+                </li>
+                <li class="list-inline-item">
+                    <img src="images/payment-icon/visa.png" alt="PaymentGateway"/>
+                </li>
+                <li class="list-inline-item">
+                    <img src="images/payment-icon/mastercard.png" alt="PaymentGateway"/>
+                </li>
+                <li class="list-inline-item">
+                    <img src="images/payment-icon/americanexpress.png" alt="PaymentGateway"/>
+                </li>
+            </ul>
+            <!-- Payment Gateway Links Ends -->
+        </div>
+        <!-- Container Ends -->
+    </body>
+</html></div><!-- Copyright Area Ends --></footer><!-- Footer Section Ends --><!-- Template JS Files --><script src="./js/jquery-3.3.1.min.js"></script><script src="./js/popper.min.js"></script><script src="./js/bootstrap.min.js"></script><script src="./js/jquery.magnific-popup.min.js"></script><script src="./js/owl.carousel.min.js"></script><script src="./js/custom.js"></script><script src="./js/swiper-bundle.min.js"></script><script src="./js/list.min.js"></script><script src="./js/app.js"></script><!--Loading js--><script></script><script src="./js/loading.js"></script><script>$.getJSON("products.json", function (json) {
+    var productArray = [];
+    for (var key in json) {
+        if (json.hasOwnProperty(key)) {
+            var item = json[key];
+            productArray.push({
+                id: item.id,
+                name: item.name,
+                brand: item.brand,
+                category: item.category,
+                madeIn: item.madeIn,
+                price: item.price,
+                imgSrc: item.imgSrc
+            });
+        }
+    }
+});
+
+var app = angular.module("mainApp", ["ngRoute"]);
+
+app.config(function ($routeProvider) {
+    $routeProvider.when("/", {templateUrl: "main.html"}).when("/404", {templateUrl: "404.html"}).when("/about", {templateUrl: "about.html"}).when("/stores", {templateUrl: "stores.html"}).when("/news", {templateUrl: "news.html"}).when("/compare", {templateUrl: "compare.html"}).when("/franchise", {templateUrl: "franchise.html"}).when("/resources", {templateUrl: "resources.html"}).when("/category-grid", {
+        templateUrl: "category-grid.html",
+        controller: 'productsListController'
+    }).when("/login", {templateUrl: "login.html"}).when("/register", {templateUrl: "register.html"}).when("/contact", {templateUrl: "contact.html"}).when("/cart", {templateUrl: "cart.html"}).when("/product-1/:id", {templateUrl: "product-full.html"});
+});
+
+app.controller("productsListController", function ($scope, $http, $routeParams) {
+    $http.get("./js/products.json").then(function (response) {
+        $scope.myData = response.data.products;
+        $scope.products = {};
+    });
+
+    // app.controller("singleProductController", [
+    //     '$scope', '$routeParams', function ($scope, $http, $locationProvider, $routeParams) {
+    //         $http.get("./js/products.json").then(function (response) {
+    //             $scope.productData = response.data.products;
+    //             $scope.products = {};
+    //             productData.id = $routeParams.id;
+    //         })
+    //     }
+    // ]);
+
+    // app.controller("singleProductController", function ($scope, $http, $routeParams) {
+    // var id = $routeParams.id;
+    // $scope.getByID = function() {
+    // $http.get("/user/" + id).then(function(response){
+    // console.log("get");
+    // $scope.user = response.data;
+    // });
+    // }
+
+    // getByID();
+    // });
+    // }
+
+    // app.controller("productSingleController", function ($scope, $http) {
+    // $http.get("./js/products.json").then(function (response) {
+    // $scope.myData = response.data.[];
+    // $scope.products = {};
+    // });
+});
+
+app.controller("singleProductController", function ($scope, $http, $routeParams) {
+	function getById(arr, paramId) {
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i].id == paramId) {
+                        return arr[i];
+                    }
+                }
+            }
+    $http.get("./js/products.json").then(function (response) {
+        $scope.myData = response.data.products;
+        $scope.products = getById($scope.myData, $routeParams.id);
+    });
 	
-		app.controller("productsListController", function ($scope, $http, $routeParams) {
-        $http.get("./js/products.json").then(function (response) {
-          $scope.myData = response.data.products;
-          $scope.products = {};
-		  
-        });
-		app.controller("singleProductController" ,['$scope', '$routeParams', function ($scope, $http, $locationProvider, $routeParams) {
-			$http.get("./js/products.json").then(function (response) {
-				$scope.productData = response.data.products;
-				$scope.products = {};
-				$scope.products.id = $routeParams.id;
-			})
-		}]);
-
-		// app.controller("productSingleController", function ($scope, $http) {
-        // $http.get("./js/products.json").then(function (response) {
-        //   $scope.myData = response.data.[];
-        //   $scope.products = {};
-        // });
-      });
+			
+});
 
 
+// var singleProductController = angular.module('singleProductController', []);
 
-		</script>
-	</body>
+//     singleProductController.controller('singleProductCtrl', [
+// 	'$routeParams', '$scope', '$http', function ($routeParams, $scope, $http) {
+// 		$http.get("./js/products.json").then(function (response) {
+//         $scope.myData = response.data.products;
+// 		function getById(arr, id) {
+//                 for (var d = 0, len = arr.length; d < len; d += 1) {
+//                     if (arr[d].id === id) {
+//                         return arr[d];
+//                     }
+//                 }
+//             }
+//         $scope.products = getById($scope.products, $routeParams.id);
+//     });
 
-</html>
+            // $scope.search = function () {
+            //     var url = "./js/products.json";
+            //     return $http.get(url).success(httpSuccess).error(function () {
+            //         alert('Unable to get information from JSON ');
+            //     });
+            // }
+            // httpSuccess = function (response) {
+            //     $scope.products = response;
+            // }
+
+            // function getById(arr, id) {
+            //     for (var d = 0, len = arr.length; d < len; d += 1) {
+            //         if (arr[d].id === id) {
+            //             return arr[d];
+            //         }
+            //     }
+            // }
+            // $scope.search();
+            // $scope.products = getById($scope.products, $routeParams.id);
+			// return products;
+    //     }
+    // ]);
+</script></body></html>

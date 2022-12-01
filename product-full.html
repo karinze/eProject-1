@@ -2,8 +2,8 @@
 <div
   id="main-container"
   class="container px-md-0"
-  ngLet*="let product in myData"
-  ng-controller="singleProductController  "
+  
+  ng-controller="singleProductController"
 >
   <!-- Breadcrumb Starts -->
   <nav aria-label="breadcrumb">
@@ -21,7 +21,7 @@
       <p>
         <a href="" class="product-img-big">
           <img
-            src="images/product-images/formula/formula2.jpg"
+          ng-src="{{products.imgSrc}}"
             alt="Image"
             class="img-fluid rounded-0"
           />
@@ -31,7 +31,7 @@
         <li class="list-inline-item-1">
           <a href="">
             <img
-              src="images/product-images/formula/formula2-1.jpg"
+            ng-src="{{products.imgSrc}}"
               alt="Image"
               class="img-fluid rounded-01"
             />
@@ -40,7 +40,7 @@
         <li class="list-inline-item-1">
           <a href="">
             <img
-              src="images/product-images/formula/formula2-2.jpg"
+            ng-src="{{products.imgSrc}}"
               alt="Image"
               class="img-fluid rounded-01"
             />
@@ -49,7 +49,7 @@
         <li class="list-inline-item-1">
           <a href="">
             <img
-              src="images/product-images/formula/formula2-3.jpg"
+            ng-src="{{products.imgSrc}}"
               alt="Image"
               class="img-fluid rounded-01"
             />
@@ -58,7 +58,7 @@
         <li class="list-inline-item-1">
           <a href="">
             <img
-              src="images/product-images/formula/formula2-4.jpg"
+            ng-src="{{products.imgSrc}}"
               alt="Image"
               class="img-fluid rounded-01"
             />
@@ -71,19 +71,15 @@
     <div class="col-sm-8 product-details">
       <div class="panel-smart">
         <!-- Product Name Starts -->
-        <h2
-          ng:repeat="product in myList"
-          ng-selected="product.id == products.id"
-          value="{{product.id}}"
-        >
-          MILK APTAKID {{product.name}}
+        <h2>
+          {{products.name}}
         </h2>
         <!-- Product Name Ends -->
         <hr />
         <!-- Manufacturer Starts -->
         <ul class="list-unstyled manufacturer">
-          <li><span>Brand:</span> Aptamil {{product.brand}}</li>
-          <li><span>Made in:</span> New Zealand {{product.madeIn}}</li>
+          <li><span>Brand:</span> {{products.brand}}</li>
+          <li><span>Made in:</span> {{products.madeIn}}</li>
           <li></li>
         </ul>
         <!-- Manufacturer Ends -->
@@ -91,7 +87,7 @@
         <!-- Price Starts -->
         <div class="price">
           <span class="price-head">Price :</span>
-          <span class="price-new">$ {{product.price}}</span>
+          <span class="price-new">$ {{products.price}}</span>
         </div>
         <!-- Price Ends -->
         <hr />
