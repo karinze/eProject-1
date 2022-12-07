@@ -2,7 +2,6 @@
 <div
   id="main-container"
   class="container px-md-0"
-  
   ng-controller="singleProductController"
 >
   <!-- Breadcrumb Starts -->
@@ -21,7 +20,7 @@
       <p>
         <a href="" class="product-img-big">
           <img
-          ng-src="{{products.imgSrc}}"
+            ng-src="{{products.imgSrc}}"
             alt="Image"
             class="img-fluid rounded-0"
           />
@@ -31,7 +30,7 @@
         <li class="list-inline-item-1">
           <a href="">
             <img
-            ng-src="{{products.imgSrc}}"
+              ng-src="{{products.imgSrc}}"
               alt="Image"
               class="img-fluid rounded-01"
             />
@@ -40,7 +39,7 @@
         <li class="list-inline-item-1">
           <a href="">
             <img
-            ng-src="{{products.imgSrc}}"
+              ng-src="{{products.imgSrc}}"
               alt="Image"
               class="img-fluid rounded-01"
             />
@@ -49,7 +48,7 @@
         <li class="list-inline-item-1">
           <a href="">
             <img
-            ng-src="{{products.imgSrc}}"
+              ng-src="{{products.imgSrc}}"
               alt="Image"
               class="img-fluid rounded-01"
             />
@@ -58,7 +57,7 @@
         <li class="list-inline-item-1">
           <a href="">
             <img
-            ng-src="{{products.imgSrc}}"
+              ng-src="{{products.imgSrc}}"
               alt="Image"
               class="img-fluid rounded-01"
             />
@@ -71,9 +70,7 @@
     <div class="col-sm-8 product-details">
       <div class="panel-smart">
         <!-- Product Name Starts -->
-        <h2>
-          {{products.name}}
-        </h2>
+        <h2>{{products.name}}</h2>
         <!-- Product Name Ends -->
         <hr />
         <!-- Manufacturer Starts -->
@@ -314,170 +311,50 @@
   </div>
   <!-- Tabs Ends -->
   <!-- Related Products Starts -->
-  <div class="product-info-box">
+  <div class="product-info-box" ng-controller="productsListController">
     <h4 class="heading">Related Products</h4>
     <!-- Products Row Starts -->
     <div class="row">
       <!-- Product #1 Starts -->
-      <div class="col-md-3 col-sm-6">
-        <div class="product-col">
-          <div class="image">
-            <img
-              src="images/product-images/formula/formula3.jpg"
-              alt="product"
-              class="img-fluid"
-            />
+      <div
+        class="col-md-3 col-sm-6 col-sm-12 list"
+        ng-repeat="x in myData | filter: getRandomProduct(myData) | limitTo: 4"
+        ngFor="let img of myData.imgSrc"
+      >
+      <div class="product-col">
+        <div class="image">
+          <img ng-src="{{x.imgSrc}}" alt="product" class="img-responsive" />
+        </div>
+        <div class="caption">
+          <div class="price">
+            <span class="price-new">$ {{x.price}}</span>
           </div>
-          <div class="caption">
-            <div class="price">
-              <span class="price-new">$25.65</span>
-              <span class="price-old">$26.85</span>
-            </div>
-
-            <h4><a href="product.html">Milk Aptamil</a></h4>
-            <div class="ratings">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <span><a href="#">1 review(s)</a></span>
-            </div>
-            <div class="cart-button button-group">
-              <button type="button" class="btn btn-cart">
-                <i class="fa fa-shopping-cart"></i>
-              </button>
-              <button type="button" title="Wishlist" class="btn btn-wishlist">
-                <i class="fa fa-heart"></i>
-              </button>
-              <button type="button" title="Compare" class="btn btn-compare">
-                <i class="fa fa-bar-chart-o"></i>
-              </button>
-            </div>
+          <h4><a ng-href="#!product-1/{{x.id}}">{{x.name}}</a></h4>
+          <div class="ratings">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <span><a href="#">1 review(s)</a></span>
+          </div>
+          <div class="cart-button button-group">
+            <button type="button" class="btn btn-cart">
+              <i class="fa fa-shopping-cart"></i>
+            </button>
+            <button type="button" title="Wishlist" class="btn btn-wishlist">
+              <i class="fa fa-heart"></i>
+            </button>
+            <button type="button" title="Compare" class="btn btn-compare">
+              <i class="fa fa-bar-chart-o"></i>
+            </button>
           </div>
         </div>
+      </div>
+    </div>
       </div>
       <!-- Product #1 Ends -->
-      <!-- Product #2 Starts -->
-      <div class="col-md-3 col-sm-6">
-        <div class="product-col">
-          <div class="image">
-            <img
-              src="images/product-images/formula/formula4.jpg"
-              alt="product"
-              class="img-fluid"
-            />
-          </div>
-          <div class="caption">
-            <div class="price">
-              <span class="price-new">$20.13</span>
-              <span class="price-old">$21.30</span>
-            </div>
-
-            <h4><a href="product.html">Meiji Infant Formula</a></h4>
-            <div class="ratings">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <span><a href="#">1 review(s)</a></span>
-            </div>
-            <div class="cart-button button-group">
-              <button type="button" class="btn btn-cart">
-                <i class="fa fa-shopping-cart"></i>
-              </button>
-              <button type="button" title="Wishlist" class="btn btn-wishlist">
-                <i class="fa fa-heart"></i>
-              </button>
-              <button type="button" title="Compare" class="btn btn-compare">
-                <i class="fa fa-bar-chart-o"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Product #2 Ends -->
-      <!-- Product #3 Starts -->
-      <div class="col-md-3 col-sm-6">
-        <div class="product-col">
-          <div class="image">
-            <img
-              src="images/product-images/formula/formula5.jpg"
-              alt="product"
-              class="img-fluid"
-            />
-          </div>
-          <div class="caption">
-            <div class="price">
-              <span class="price-new">$13.90</span>
-              <span class="price-old">$14.50</span>
-            </div>
-
-            <h4><a href="product.html">Optinum Gold 2</a></h4>
-            <div class="ratings">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <span><a href="#">1 review(s)</a></span>
-            </div>
-            <div class="cart-button button-group">
-              <button type="button" class="btn btn-cart">
-                <i class="fa fa-shopping-cart"></i>
-              </button>
-              <button type="button" title="Wishlist" class="btn btn-wishlist">
-                <i class="fa fa-heart"></i>
-              </button>
-              <button type="button" title="Compare" class="btn btn-compare">
-                <i class="fa fa-bar-chart-o"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Product #3 Ends -->
-      <!-- Product #4 Starts -->
-      <div class="col-md-3 col-sm-6">
-        <div class="product-col">
-          <div class="image">
-            <img
-              src="images/product-images/formula/Similac_5g.jpg"
-              alt="product"
-              class="img-fluid"
-            />
-          </div>
-          <div class="caption">
-            <div class="price">
-              <span class="price-new">$24.10</span>
-              <span class="price-old">$25.73</span>
-            </div>
-
-            <h4><a href="product.html">PediaSure </a></h4>
-            <div class="ratings">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <span><a href="#">1 review(s)</a></span>
-            </div>
-            <div class="cart-button button-group">
-              <button type="button" class="btn btn-cart">
-                <i class="fa fa-shopping-cart"></i>
-              </button>
-              <button type="button" title="Wishlist" class="btn btn-wishlist">
-                <i class="fa fa-heart"></i>
-              </button>
-              <button type="button" title="Compare" class="btn btn-compare">
-                <i class="fa fa-bar-chart-o"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Product #4 Ends -->
+     
     </div>
     <!-- Products Row Ends -->
   </div>

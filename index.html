@@ -211,7 +211,7 @@
 
                                 <li>TinyTots</li>
                                 <li>
-                                    1247 LB Nagar Road, Hyderabad, Telangana - 35
+                                    590 Đ. Cách Mạng Tháng 8, Phường 11, Quận 3, Thành phố Hồ Chí Minh 723564
                                 </li>
                                 <li>
                                     Email:
@@ -264,7 +264,9 @@
         </div>
         <!-- Container Ends -->
     </body>
-</html></div><!-- Copyright Area Ends --></footer><!-- Footer Section Ends --><!-- Template JS Files --><script src="./js/jquery-3.3.1.min.js"></script><script src="./js/popper.min.js"></script><script src="./js/bootstrap.min.js"></script><script src="./js/jquery.magnific-popup.min.js"></script><script src="./js/owl.carousel.min.js"></script><script src="./js/custom.js"></script><script src="./js/swiper-bundle.min.js"></script><script src="./js/list.min.js"></script><script src="./js/app.js"></script><!--Loading js--><script></script><script src="./js/loading.js"></script><script>$.getJSON("products.json", function (json) {
+</html></div><!-- Copyright Area Ends --></footer><!-- Footer Section Ends --><!-- Template JS Files --><script src="./js/jquery-3.3.1.min.js"></script><script src="./js/popper.min.js"></script><script src="./js/bootstrap.min.js"></script><script src="./js/jquery.magnific-popup.min.js"></script><script src="./js/owl.carousel.min.js"></script><script src="./js/custom.js"></script><script src="./js/swiper-bundle.min.js"></script><script src="./js/list.min.js"></script><script src="./js/app.js"></script><!--Loading js--><script></script><script src="./js/loading.js"></script>
+<script>
+$.getJSON("products.json", function (json) {
     var productArray = [];
     for (var key in json) {
         if (json.hasOwnProperty(key)) {
@@ -294,17 +296,22 @@ app.config(function ($routeProvider) {
 app.controller("productsListController", function ($scope, $http, $routeParams) {
     
     $http.get("./js/products.json").then(function (response) {
-        
+        function getRandomProduct(){    
+        return $scope.myData[Math.floor(Math.random() * $scope.myData.length)];
+        };
     
 
         $scope.myData = response.data.products;
         $scope.products = {};
+        
         $scope.categories = ['Baby Food','Formula','Body Care', 'Diapers', 'Softeners', 'Toys', 'Vitamins', 'Clothes'];
         $scope.filterProductsByCategory = function(category){
                 $scope.search = category;
             };
+        
     });
     
+
 
     // app.controller("singleProductController", [
     //     '$scope', '$routeParams', function ($scope, $http, $locationProvider, $routeParams) {
