@@ -754,8 +754,8 @@ ul.header-links li a:focus {
   margin-top: 15px;
 }
 .panel-smart {
-  margin-bottom: 20px;
-  padding: 20px;
+  margin-bottom: 50px;
+  padding: 20px 20px 50px 20px;
   background: #fff;
   border: 1px solid #e4e4e4;
   -webkit-border-radius: 3px;
@@ -1586,7 +1586,7 @@ a.list-group-item {
   text-align: center;
   position: absolute;
   top: 50%;
-  left: 80%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: white !important;
 }
@@ -1672,44 +1672,46 @@ a:hover {
   border-color: rgb(53, 63, 182);
 }
 td.text-center {
-  margin: auto!important;
+  margin: auto !important;
 }
-table.center{
+table.center {
   margin: auto;
 }
-*{
-margin: 0;
-padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.load{
+.load {
   width: 100%;
-  height: 100%;           
-  background: #FF4EAE;
+  height: 100%;
+  background: #ff4eae;
   display: block;
   overflow: hidden;
-  position:fixed;
-  top: 0; left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 10000000000000000;
-}  
-.load img{
+}
+.load img {
   width: 300px;
   height: 300px;
   position: absolute;
-  top: 50%; left: 50%;
-  margin-top: -150px; margin-left: -150px;
-}   
-.map{
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -150px;
+}
+.map {
   width: 100%;
   height: 100%;
-} 
-#map-1{
+}
+#map-1 {
   padding-bottom: 95px;
 }
-#map-wrapper{
+#map-wrapper {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-#map-block{
+#map-block {
   height: 322px;
 }
-
