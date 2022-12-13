@@ -1707,3 +1707,9 @@ table.center {
   color: #fff;
   background: #0085b6;
 }
+
+.img-news-1 {
+  width: 95%;
+  height: auto;
+  margin: 25px 0;
+}
