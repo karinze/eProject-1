@@ -48,9 +48,12 @@
               <input
                 type="number"
                 name="quantity"
+                id="currentQuantity"
                 ng-model="qty"
                 ng-value="{{x.quantity}}"
+                onchange="getCurrentQuantity(x)"
                 size="1"
+                min="1"
                 class="form-control"
               />
             </div>
@@ -59,10 +62,8 @@
           <td
             class="text-center"
             ng-model="finalprice"
-            ng-bind="{{finalprice = unitprice * qty}}"
-          >
-            $ {{finalprice}}
-          </td>
+            ng-bind="{{finalprice = x.quantity * x.price}}"
+          ></td>
           <td class="text-center">
             <button
               type="submit"
