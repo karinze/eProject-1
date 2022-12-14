@@ -308,6 +308,7 @@ app.controller("productsListController", function ($scope, $http, $localStorage,
                 $scope.search = category;
             };
         $scope.cloneItem = function(myData) {
+            myData.quantity++;
             $scope.$storage.products.push({
                 "id": myData.id,
                 "name": myData.name,
@@ -329,7 +330,7 @@ app.controller("productsListController", function ($scope, $http, $localStorage,
             }
             item.quantity++;
         }
-        $scope.increment = function(item){
+        $scope.decrement = function(item){
             if (item.quantity <= min) {
                 return;
             }
