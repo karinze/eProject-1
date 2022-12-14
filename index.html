@@ -22,6 +22,7 @@
         <link href="css/owl.carousel.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
+        <link href="css/pagination.css" rel="stylesheet">
         <link
         rel="stylesheet" href="css/swiper-bundle.min.css">
         <!-- Angular Import -->
@@ -282,7 +283,7 @@ $.getJSON("products.json", function (json) {
 var app = angular.module("mainApp", ["ngRoute", "ngStorage"]);
 
 app.config(function ($routeProvider) {
-    $routeProvider.when("/", {templateUrl: "main.html"}).when("/404", {templateUrl: "404.html"}).when("/about", {templateUrl: "about.html"}).when("/stores", {templateUrl: "stores.html"}).when("/news", {templateUrl: "news.html"}).when("/compare", {templateUrl: "compare.html"}).when("/franchise", {templateUrl: "franchise.html"}).when("/resources", {templateUrl: "resources.html"}).when("/category-grid", {
+    $routeProvider.when("/", {templateUrl: "main.html"}).when("/404", {templateUrl: "404.html"}).when("/about", {templateUrl: "about.html"}).when("/stores", {templateUrl: "stores.html"}).when("/news", {templateUrl: "news.html"}).when("/news-2", {templateUrl: "news-2.html"}).when("/news-3", {templateUrl: "news-3.html"}).when("/compare", {templateUrl: "compare.html"}).when("/franchise", {templateUrl: "franchise.html"}).when("/resources", {templateUrl: "resources.html"}).when("/category-grid", {
         templateUrl: "category-grid.html",
         controller: 'productsListController'
     }).when("/login", {templateUrl: "login.html"}).when("/register", {templateUrl: "register.html"}).when("/contact", {templateUrl: "contact.html"}).when("/cart", {templateUrl: "cart.html"}).when("/product-1/:id", {templateUrl: "product-full.html"});
