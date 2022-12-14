@@ -40,7 +40,7 @@
       <div class="row product-list">
         <!-- Product Starts -->
         <div
-          class="col-lg-3 col-md-6 col-sm-12 list"
+          class="col-xl-3 col-lg-4 col-md-6 col-sm-12 list"
           ng-repeat="x in myData | filter: search | filter: products.stock"
           ngFor="let img of myData.imgSrc"
         >
@@ -68,7 +68,11 @@
                 <span><a href="#">1 review(s)</a></span>
               </div>
               <div class="cart-button button-group">
-                <button type="button" class="btn btn-cart">
+                <button
+                  type="button"
+                  ng-click="cloneItem(x)"
+                  class="btn btn-cart"
+                >
                   <i class="fa fa-shopping-cart"></i>
                 </button>
                 <button type="button" title="Wishlist" class="btn btn-wishlist">

@@ -7,7 +7,8 @@
       "category": "Baby Food",
       "madeIn": "Viet Nam",
       "price": 10.25,
-      "imgSrc": "images/product-images/babyfood/1.png"
+      "imgSrc": "images/product-images/babyfood/1.png",
+      "quantity": 0
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "category": "Baby Food",
       "madeIn": "Viet Nam",
       "price": 10.25,
-      "imgSrc": "images/product-images/babyfood/2.png"
+      "imgSrc": "images/product-images/babyfood/2.png",
+      "quantity": 0
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "category": "Formula",
       "madeIn": "New Zealand",
       "price": 10.25,
-      "imgSrc": "images/product-images/formula/aptamil-formula1-1.jpg"
+      "imgSrc": "images/product-images/formula/aptamil-formula1-1.jpg",
+      "quantity": 0
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "category": "Baby Food",
       "madeIn": "Viet Nam",
       "price": 10.25,
-      "imgSrc": "images/product-images/babyfood/Pumpkin-noodles-for baby-food-anpaso.png"
+      "imgSrc": "images/product-images/babyfood/Pumpkin-noodles-for baby-food-anpaso.png",
+      "quantity": 0
     },
     {
       "id": 5,
@@ -43,7 +47,8 @@
       "category": "Baby Food",
       "madeIn": "Korea",
       "price": 10.25,
-      "imgSrc": "images/product-images/babyfood/pho-mai-an-dam-ivenet-vi-chuoi.png"
+      "imgSrc": "images/product-images/babyfood/pho-mai-an-dam-ivenet-vi-chuoi.png",
+      "quantity": 0
     },
     {
       "id": 6,
@@ -52,7 +57,8 @@
       "category": "Baby Food",
       "madeIn": "Japan",
       "price": 10.25,
-      "imgSrc": "images/product-images/babyfood/pho-mai-cho-be-cac-loai-hat-dinh-duong-qbb-90g.png"
+      "imgSrc": "images/product-images/babyfood/pho-mai-cho-be-cac-loai-hat-dinh-duong-qbb-90g.png",
+      "quantity": 0
     },
     {
       "id": 7,
@@ -61,7 +67,8 @@
       "category": "Baby Food",
       "madeIn": "Korea",
       "price": 10.25,
-      "imgSrc": "images/product-images/babyfood/pho-mai-cho-be-ivenet.png"
+      "imgSrc": "images/product-images/babyfood/pho-mai-cho-be-ivenet.png",
+      "quantity": 0
     },
     {
       "id": 8,
@@ -70,7 +77,8 @@
       "category": "Baby Food",
       "madeIn": "Viet Nam",
       "price": 10.25,
-      "imgSrc": "images/product-images/babyfood/vang-sua-hff-hat-de.png"
+      "imgSrc": "images/product-images/babyfood/vang-sua-hff-hat-de.png",
+      "quantity": 0
     },
     {
       "id": 9,
@@ -79,7 +87,8 @@
       "category": "Baby Food",
       "madeIn": "Singapore",
       "price": 10.25,
-      "imgSrc": "images/product-images/babyfood/combo 3 sữa chua Nestle P'tit Brasse vị tự nhiên.jpg"
+      "imgSrc": "images/product-images/babyfood/combo 3 sữa chua Nestle P'tit Brasse vị tự nhiên.jpg",
+      "quantity": 0
     },
     {
       "id": 10,
@@ -88,7 +97,8 @@
       "category": "Baby Food",
       "madeIn": "Singapore",
       "price": 10.25,
-      "imgSrc": "images/product-images/babyfood/dau-o-liu-dinh-duong-cho-tre-em-nhan-hieu-kiddy-250-ml.jpg"
+      "imgSrc": "images/product-images/babyfood/dau-o-liu-dinh-duong-cho-tre-em-nhan-hieu-kiddy-250-ml.jpg",
+      "quantity": 0
     },
     {
       "id": 11,
@@ -97,7 +107,8 @@
       "category": "Body Care",
       "madeIn": "Viet Nam",
       "price": 10.25,
-      "imgSrc": "images/product-images/bodycare/Borub_HerbalShampoo250ml.webp"
+      "imgSrc": "images/product-images/bodycare/Borub_HerbalShampoo250ml.webp",
+      "quantity": 0
     },
     {
       "id": 12,
@@ -106,7 +117,8 @@
       "category": "Body Care",
       "madeIn": "France",
       "price": 10.25,
-      "imgSrc": "images/product-images/bodycare/Purite_BodyWashOrange.webp"
+      "imgSrc": "images/product-images/bodycare/Purite_BodyWashOrange.webp",
+      "quantity": 0
     },
     {
       "id": 13,
@@ -115,7 +127,8 @@
       "category": "Body Care",
       "madeIn": "France",
       "price": 10.25,
-      "imgSrc": "images/product-images/bodycare/Purite_BodyWashRose.webp"
+      "imgSrc": "images/product-images/bodycare/Purite_BodyWashRose.webp",
+      "quantity": 0
     },
     {
       "id": 14,
@@ -124,7 +137,8 @@
       "category": "Body Care",
       "madeIn": "Germany",
       "price": 10.25,
-      "imgSrc": "images/product-images/bodycare/Cetaphil Chamomile Baby Shower Gel-400ml.jpg"
+      "imgSrc": "images/product-images/bodycare/Cetaphil Chamomile Baby Shower Gel-400ml.jpg",
+      "quantity": 0
     },
     {
       "id": 15,
@@ -133,7 +147,8 @@
       "category": "Body Care",
       "madeIn": "Viet Nam",
       "price": 10.25,
-      "imgSrc": "images/product-images/bodycare/Lactacyd Baby Extra Milky Shower Gel.jpg"
+      "imgSrc": "images/product-images/bodycare/Lactacyd Baby Extra Milky Shower Gel.jpg",
+      "quantity": 0
     },
     {
       "id": 16,
@@ -142,7 +157,8 @@
       "category": "Diapers",
       "madeIn": "Japan",
       "price": 10.25,
-      "imgSrc": "images/product-images/diapers/diapers (1).jpg"
+      "imgSrc": "images/product-images/diapers/diapers (1).jpg",
+      "quantity": 0
     },
     {
       "id": 17,
@@ -151,7 +167,8 @@
       "category": "Diapers",
       "madeIn": "Japan",
       "price": 10.25,
-      "imgSrc": "images/product-images/diapers/diapers (2).jpg"
+      "imgSrc": "images/product-images/diapers/diapers (2).jpg",
+      "quantity": 0
     },
     {
       "id": 18,
@@ -160,7 +177,8 @@
       "category": "Diapers",
       "madeIn": "Japan",
       "price": 10.25,
-      "imgSrc": "images/product-images/diapers/diapers (3).jpg"
+      "imgSrc": "images/product-images/diapers/diapers (3).jpg",
+      "quantity": 0
     },
     {
       "id": 19,
@@ -169,7 +187,8 @@
       "category": "Diapers",
       "madeIn": "China",
       "price": 10.25,
-      "imgSrc": "images/product-images/diapers/diapers (4).jpg"
+      "imgSrc": "images/product-images/diapers/diapers (4).jpg",
+      "quantity": 0
     },
     {
       "id": 20,
@@ -178,7 +197,8 @@
       "category": "Diapers",
       "madeIn": "Japan",
       "price": 10.25,
-      "imgSrc": "images/product-images/diapers/diapers.png"
+      "imgSrc": "images/product-images/diapers/diapers.png",
+      "quantity": 0
     },
     {
       "id": 21,
@@ -187,7 +207,8 @@
       "category": "Softeners",
       "madeIn": "Thailand",
       "price": 10.25,
-      "imgSrc": "images/product-images/softeners/Enfant_Softener.jpg"
+      "imgSrc": "images/product-images/softeners/Enfant_Softener.jpg",
+      "quantity": 0
     },
     {
       "id": 22,
@@ -196,7 +217,8 @@
       "category": "Softeners",
       "madeIn": "Thailand",
       "price": 10.25,
-      "imgSrc": "images/product-images/softeners/Enfant_TropicalGarden.webp"
+      "imgSrc": "images/product-images/softeners/Enfant_TropicalGarden.webp",
+      "quantity": 0
     },
     {
       "id": 23,
@@ -205,7 +227,8 @@
       "category": "Softeners",
       "madeIn": "Korea",
       "price": 10.25,
-      "imgSrc": "images/product-images/softeners/Korean laundry detergent Animo.jpg"
+      "imgSrc": "images/product-images/softeners/Korean laundry detergent Animo.jpg",
+      "quantity": 0
     },
     {
       "id": 24,
@@ -214,7 +237,8 @@
       "category": "Softeners",
       "madeIn": "Korea",
       "price": 10.25,
-      "imgSrc": "images/product-images/softeners/Korean laundry detergent AGA-ae.jpg"
+      "imgSrc": "images/product-images/softeners/Korean laundry detergent AGA-ae.jpg",
+      "quantity": 0
     },
     {
       "id": 25,
@@ -223,7 +247,8 @@
       "category": "Softeners",
       "madeIn": "USA",
       "price": 10.25,
-      "imgSrc": "images/product-images/softeners/Ariel laundry detergent Downy flavor.jpg"
+      "imgSrc": "images/product-images/softeners/Ariel laundry detergent Downy flavor.jpg",
+      "quantity": 0
     },
     {
       "id": 26,
@@ -232,7 +257,8 @@
       "category": "Toys",
       "madeIn": "China",
       "price": 10.25,
-      "imgSrc": "images/product-images/toys/ball-1.png"
+      "imgSrc": "images/product-images/toys/ball-1.png",
+      "quantity": 0
     },
     {
       "id": 27,
@@ -241,7 +267,8 @@
       "category": "Toys",
       "madeIn": "China",
       "price": 10.25,
-      "imgSrc": "images/product-images/toys/ball-6.png"
+      "imgSrc": "images/product-images/toys/ball-6.png",
+      "quantity": 0
     },
     {
       "id": 28,
@@ -250,7 +277,8 @@
       "category": "Toys",
       "madeIn": "China",
       "price": 10.25,
-      "imgSrc": "images/product-images/toys/ball-7.jpg"
+      "imgSrc": "images/product-images/toys/ball-7.jpg",
+      "quantity": 0
     },
     {
       "id": 29,
@@ -259,7 +287,8 @@
       "category": "Toys",
       "madeIn": "China",
       "price": 10.25,
-      "imgSrc": "images/product-images/toys/boy-ambulance.png"
+      "imgSrc": "images/product-images/toys/boy-ambulance.png",
+      "quantity": 0
     },
     {
       "id": 30,
@@ -268,7 +297,8 @@
       "category": "Toys",
       "madeIn": "China",
       "price": 10.25,
-      "imgSrc": "images/product-images/toys/boy-dinosaur.png"
+      "imgSrc": "images/product-images/toys/boy-dinosaur.png",
+      "quantity": 0
     },
     {
       "id": 31,
@@ -277,7 +307,8 @@
       "category": "Toys",
       "madeIn": "China",
       "price": 10.25,
-      "imgSrc": "images/product-images/toys/boy-firetruck.png"
+      "imgSrc": "images/product-images/toys/boy-firetruck.png",
+      "quantity": 0
     },
     {
       "id": 32,
@@ -286,7 +317,8 @@
       "category": "Toys",
       "madeIn": "China",
       "price": 10.25,
-      "imgSrc": "images/product-images/toys/boy-lego.png"
+      "imgSrc": "images/product-images/toys/boy-lego.png",
+      "quantity": 0
     },
     {
       "id": 33,
@@ -295,7 +327,8 @@
       "category": "Toys",
       "madeIn": "China",
       "price": 10.25,
-      "imgSrc": "images/product-images/toys/boy-rhino.png"
+      "imgSrc": "images/product-images/toys/boy-rhino.png",
+      "quantity": 0
     },
     {
       "id": 34,
@@ -304,7 +337,8 @@
       "category": "Toys",
       "madeIn": "China",
       "price": 10.25,
-      "imgSrc": "images/product-images/toys/boy-setblock.png"
+      "imgSrc": "images/product-images/toys/boy-setblock.png",
+      "quantity": 0
     },
     {
       "id": 35,
@@ -313,7 +347,8 @@
       "category": "Toys",
       "madeIn": "China",
       "price": 10.25,
-      "imgSrc": "images/product-images/toys/boy-turtle.png"
+      "imgSrc": "images/product-images/toys/boy-turtle.png",
+      "quantity": 0
     },
     {
       "id": 36,
@@ -322,7 +357,8 @@
       "category": "Formula",
       "madeIn": "New Zealand",
       "price": 10.25,
-      "imgSrc": "images/product-images/formula/formula2.jpg"
+      "imgSrc": "images/product-images/formula/formula2.jpg",
+      "quantity": 0
     },
     {
       "id": 37,
@@ -331,7 +367,8 @@
       "category": "Formula",
       "madeIn": "Japan",
       "price": 10.25,
-      "imgSrc": "images/product-images/formula/formula4.jpg"
+      "imgSrc": "images/product-images/formula/formula4.jpg",
+      "quantity": 0
     },
     {
       "id": 38,
@@ -340,7 +377,8 @@
       "category": "Formula",
       "madeIn": "Viet Nam",
       "price": 10.25,
-      "imgSrc": "images/product-images/formula/formula5.jpg"
+      "imgSrc": "images/product-images/formula/formula5.jpg",
+      "quantity": 0
     },
     {
       "id": 39,
@@ -349,7 +387,8 @@
       "category": "Formula",
       "madeIn": "USA",
       "price": 10.25,
-      "imgSrc": "images/product-images/formula/formula6.jpg"
+      "imgSrc": "images/product-images/formula/formula6.jpg",
+      "quantity": 0
     },
     {
       "id": 40,
@@ -358,7 +397,8 @@
       "category": "Formula",
       "madeIn": "Singapore",
       "price": 10.25,
-      "imgSrc": "images/product-images/formula/formula7.jpg"
+      "imgSrc": "images/product-images/formula/formula7.jpg",
+      "quantity": 0
     },
     {
       "id": 41,
@@ -367,7 +407,8 @@
       "category": "Vitamins",
       "madeIn": "Canada",
       "price": 10.25,
-      "imgSrc": "images/product-images/vitamins/bioamicus-complete.png"
+      "imgSrc": "images/product-images/vitamins/bioamicus-complete.png",
+      "quantity": 0
     },
     {
       "id": 42,
@@ -376,7 +417,8 @@
       "category": "Vitamins",
       "madeIn": "Viet Nam",
       "price": 10.25,
-      "imgSrc": "images/product-images/vitamins/com-bio-acimin-fiber.png"
+      "imgSrc": "images/product-images/vitamins/com-bio-acimin-fiber.png",
+      "quantity": 0
     },
     {
       "id": 43,
@@ -385,7 +427,8 @@
       "category": "Vitamins",
       "madeIn": "Viet Nam",
       "price": 10.25,
-      "imgSrc": "images/product-images/vitamins/com-vi-sinh-probeeotic.png"
+      "imgSrc": "images/product-images/vitamins/com-vi-sinh-probeeotic.png",
+      "quantity": 0
     },
     {
       "id": 44,
@@ -394,7 +437,8 @@
       "category": "Vitamins",
       "madeIn": "Italy",
       "price": 10.25,
-      "imgSrc": "images/product-images/vitamins/fitobimbi-appetito.png"
+      "imgSrc": "images/product-images/vitamins/fitobimbi-appetito.png",
+      "quantity": 0
     },
     {
       "id": 45,
@@ -403,7 +447,8 @@
       "category": "Vitamins",
       "madeIn": "Viet Nam",
       "price": 10.25,
-      "imgSrc": "images/product-images/vitamins/men-vi-sinh-clausy-10-ong-hop.png"
+      "imgSrc": "images/product-images/vitamins/men-vi-sinh-clausy-10-ong-hop.png",
+      "quantity": 0
     }
   ]
 }

@@ -27,7 +27,7 @@
         <!-- Angular Import -->
         <script src="./js/angular.min.js"></script>
         <script src="./js/angular-route.js"></script>
-
+        <script src="./js/ngStorage.min.js"></script>
 
     </head>
     <body
@@ -272,13 +272,14 @@ $.getJSON("products.json", function (json) {
                 category: item.category,
                 madeIn: item.madeIn,
                 price: item.price,
-                imgSrc: item.imgSrc
+                imgSrc: item.imgSrc,
+                quantity: item.quantity
             });
         }
     }
 });
 
-var app = angular.module("mainApp", ["ngRoute"]);
+var app = angular.module("mainApp", ["ngRoute", "ngStorage"]);
 
 app.config(function ($routeProvider) {
     $routeProvider.when("/", {templateUrl: "main.html"}).when("/404", {templateUrl: "404.html"}).when("/about", {templateUrl: "about.html"}).when("/stores", {templateUrl: "stores.html"}).when("/news", {templateUrl: "news.html"}).when("/compare", {templateUrl: "compare.html"}).when("/franchise", {templateUrl: "franchise.html"}).when("/resources", {templateUrl: "resources.html"}).when("/category-grid", {
@@ -287,21 +288,56 @@ app.config(function ($routeProvider) {
     }).when("/login", {templateUrl: "login.html"}).when("/register", {templateUrl: "register.html"}).when("/contact", {templateUrl: "contact.html"}).when("/cart", {templateUrl: "cart.html"}).when("/product-1/:id", {templateUrl: "product-full.html"});
 });
 
-app.controller("productsListController", function ($scope, $http, $routeParams) {
-    
+app.controller("productsListController", function ($scope, $http, $localStorage, $routeParams) {
+    const max = +10;
+            const min = 0;
+    $scope.$storage = $localStorage.$default({
+
+    'products': []
+
+    });
     $http.get("./js/products.json").then(function (response) {
         function getRandomProduct(){    
         return $scope.myData[Math.floor(Math.random() * $scope.myData.length)];
         };
-    
-
+        
         $scope.myData = response.data.products;
         $scope.products = {};
-        
         $scope.categories = ['Baby Food','Formula','Body Care', 'Diapers', 'Softeners', 'Toys', 'Vitamins', 'Clothes'];
         $scope.filterProductsByCategory = function(category){
                 $scope.search = category;
             };
+        $scope.cloneItem = function(myData) {
+            $scope.$storage.products.push({
+                "id": myData.id,
+                "name": myData.name,
+                "brand": myData.brand,
+                "category": myData.category,
+                "madeIn": myData.madeIn,
+                "price": myData.price,
+                "imgSrc": myData.imgSrc,
+                "quantity": myData.quantity  
+            })
+        }
+        $scope.getLocalData = $localStorage.products;
+        $scope.deleteItem = function(item) {
+            $localStorage.products.splice($localStorage.products.indexOf(item), 1);
+        }
+        $scope.increment = function(item){
+            if (item.quantity >= max) {
+                return;
+            }
+            item.quantity++;
+        }
+        $scope.increment = function(item){
+            if (item.quantity <= min) {
+                return;
+            }
+            item.quantity--;
+        }
+        
+        
+                
         
     });
     
