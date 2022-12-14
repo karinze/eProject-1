@@ -291,6 +291,7 @@ app.config(function ($routeProvider) {
 app.controller("productsListController", function ($scope, $http, $localStorage, $routeParams) {
     const max = +10;
             const min = 0;
+    
     $scope.$storage = $localStorage.$default({
 
     'products': []
@@ -336,7 +337,16 @@ app.controller("productsListController", function ($scope, $http, $localStorage,
             }
             item.quantity--;
         }
-        
+        $scope.getCurrentQuantity = function (item) {
+        var number = document.getElementById("currentQuantity");
+        if (number > item.quantity) {
+            increment(item);
+        } else if (number < item.quantity) {
+            decrement(item);
+        } else {
+            return;
+        }
+    }
         
                 
         

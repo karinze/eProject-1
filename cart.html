@@ -48,9 +48,10 @@
               <input
                 type="number"
                 name="quantity"
+                id="currentQuantity"
                 ng-model="qty"
                 ng-value="{{x.quantity}}"
-                value="1"
+                onchange="getCurrentQuantity(x)"
                 size="1"
                 min="1"
                 class="form-control"
