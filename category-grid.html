@@ -1,4 +1,5 @@
 <!-- Main Container Starts -->
+
 <div
   id="main-container"
   ng-controller="productsListController"
@@ -11,6 +12,7 @@
       <li class="breadcrumb-item active" aria-current="page">Products List</li>
     </ol>
   </nav>
+  
   <!-- Breadcrumb Ends -->
   <!-- Nested Row Starts -->
   <div class="row">
@@ -36,6 +38,7 @@
           {{cat}}
         </button>
       </div>
+      
       <!-- Product Grid Display Starts -->
       <div class="row product-list">
         <!-- Product Starts -->
@@ -73,7 +76,7 @@
                   ng-click="cloneItem(x); increment(x)"
                   class="btn btn-cart"
                 >
-                  <i class="fa fa-shopping-cart"></i>
+                  <i  onclick="showSuccessToast()"  class="fa fa-shopping-cart"></i>
                 </button>
                 <button type="button" title="Wishlist" class="btn btn-wishlist">
                   <i class="fa fa-heart"></i>
@@ -97,3 +100,4 @@
   <!-- Nested Row Ends -->
 </div>
 <!-- Main Container Ends -->
+<div id="toast"></div>

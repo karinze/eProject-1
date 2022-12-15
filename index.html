@@ -15,7 +15,7 @@
         <!-- Google Web Fonts -->
         <link
         href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- Template CSS Files  -->
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <link href="css/magnific-popup.css" rel="stylesheet">
@@ -25,6 +25,7 @@
         <link href="css/pagination.css" rel="stylesheet">
         <link
         rel="stylesheet" href="css/swiper-bundle.min.css">
+        
         <!-- Angular Import -->
         <script src="./js/angular.min.js"></script>
         <script src="./js/angular-route.js"></script>
@@ -440,4 +441,52 @@ app.controller("singleProductController", function ($scope, $http, $routeParams)
 			// return products;
     //     }
     // ]);
-</script></body></html>
+
+</script> 
+<script>
+    
+    function toast({title='' , message='',type='success' , duration=1000}){
+            const main = document.getElementById('toast');
+            if(main){
+                const toast=document.createElement('div');
+                //Auto remove toast
+                const autoRemoveId= setTimeout(function(){
+                    main.removeChild(toast);
+                },duration + 1000)
+                toast.onclick=function(e) {
+                    if(e.target.closest('.toast__close')){
+                        main.removeChild(toast);
+                        clearTimeout(autoRemoveId);
+                    }
+                }
+                const delay = (duration / 1000).toFixed(2);
+                toast.classList.add('toast',`toast--${type}`);
+                toast.style.animation = `slideInLeft ease 2s, fadeOut linear 3s ${delay}s forwards`;
+                toast.innerHTML =`
+                        <div class="toast__icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="toast__body">
+                    <h3 class="toast__title">Success</h3>
+                    <p class="toast__msg">Added to your cart</p>
+                    </div>
+                    <div class="toast__close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                `;
+                main.appendChild(toast);
+
+                
+            }
+          }
+          
+          function showSuccessToast(){
+                toast({
+                title:'Success',
+                message:'Added to your cart',
+                type:'success',
+                duration : 1000
+            })
+          }
+</script>
+</body></html>
