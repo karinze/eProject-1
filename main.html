@@ -11,28 +11,7 @@
 </div>
 <!-- Main Container Starts -->
 <div id="main-container" class="container px-md-0">
-    <!-- Category Starts -->
-    <!-- <div class="row text-center">
-                <div class="col-sm-4 col-12">
-                    <div class="category-banner-box">
-                        <img src="images/banners/category-banner-img-1.jpg" alt="Banner 1" class="img-fluid rounded mx-auto img-center">
-                    </div>
-                </div>
-                <div class="col-sm-4 col-12">
-                    <div class="category-banner-box">
-                        <img src="images/banners/category-banner-img-2.jpg" alt="Banner 2" class="img-fluid rounded mx-auto img-center">
-                    </div>
-                    <div class="category-banner-box">
-                        <img src="images/banners/category-banner-img-3.jpg" alt="Banner 3" class="img-fluid rounded mx-auto img-center">
-                    </div>
-                </div>
-                <div class="col-sm-4 col-12">
-                    <div class="category-banner-box">
-                        <img src="images/banners/category-banner-img-4.jpg" alt="Banner 4" class="img-fluid rounded mx-auto img-center">
-                    </div>
-                </div>
-            </div> -->
-    <!-- Category Ends -->
+
     <!-- Latest Products Starts -->
         <div class="container"> <div class="row">
             <section
@@ -44,13 +23,13 @@
                 <!-- Heading Ends -->
                 <!-- Products Row Starts -->
                 <div
-                    class="row">
+                    class="row" ng-controller="productsListController">
 
 
                     <!-- Product #1 Starts -->
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="product-col rounded-0 alt">
-                            <a href="#!category-grid">
+                            <a href="#!category-grid" ng-click="filterProductsByCategory('Formula')">
                                 
                                     <img src="images/product-images/formula/Similac_5g.jpg" alt="product" class="img-fluid rounded mx-auto">
                                 
@@ -67,7 +46,7 @@
                     <!-- Product #1 Starts -->
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="product-col rounded-0 alt">
-                            <a href="#!category-grid">
+                            <a href="#!category-grid" ng-click="filterProductsByCategory(Formula)">
                              
                                     <img src="images/product-images/toys/ball-1.png" alt="product" class="img-fluid rounded mx-auto">
                                 
