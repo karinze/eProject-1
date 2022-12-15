@@ -110,8 +110,7 @@
                                 <button type="button" class="btn btn-block btn-lg dropdown-toggle text-uppercase text-md-right">
                                     <i class="fa fa-shopping-cart"></i>
                                     <strong class="d-none d-lg-inline-block">Shopping Cart</strong>
-                                    <span id="cart-total">2 Items</span>
-                                    <i class="fa fa-angle-down"></i>
+
                                 </button>
 
                             </a>
@@ -290,7 +289,7 @@ app.config(function ($routeProvider) {
     }).when("/login", {templateUrl: "login.html"}).when("/register", {templateUrl: "register.html"}).when("/contact", {templateUrl: "contact.html"}).when("/cart", {templateUrl: "cart.html"}).when("/product-1/:id", {templateUrl: "product-full.html"});
 });
 
-app.controller("productsListController", function ($scope, $http, $localStorage, $routeParams) {
+app.controller("productsListController", function ($scope, $http, $localStorage, $sessionStorage, $routeParams) {
     const max = +10;
             const min = 0;
     
@@ -324,6 +323,21 @@ app.controller("productsListController", function ($scope, $http, $localStorage,
             })
         }
         $scope.getLocalData = $localStorage.products;
+      
+        $scope.nuke = function() {
+            for(i = 0; i < $localStorage.length; i++) {
+                $localStorage.products.splice($localStorage.products.indexOf(i), 1);
+            }
+        }
+        $scope.total = 0; 
+  
+        $scope.sumPrice = function(products) {
+            var total = 0;
+            angular.forEach(products,function(value,index){
+            total += parseFloat(value.price);
+            }); 
+            return total.toFixed(2);
+        };
         $scope.deleteItem = function(item) {
             $localStorage.products.splice($localStorage.products.indexOf(item), 1);
         }
@@ -332,13 +346,18 @@ app.controller("productsListController", function ($scope, $http, $localStorage,
                 return;
             }
             item.quantity++;
+            $scope.$apply();
         }
         $scope.decrement = function(item){
             if (item.quantity <= min) {
                 return;
             }
             item.quantity--;
+            $scope.$apply();
         }
+        $scope.reload = function() {
+            $state.reload();
+          };
         $scope.getCurrentQuantity = function (item) {
         var number = document.getElementById("currentQuantity");
         if (number > item.quantity) {
@@ -348,42 +367,8 @@ app.controller("productsListController", function ($scope, $http, $localStorage,
         } else {
             return;
         }
-    }
-        
-                
-        
+    }        
     });
-    
-
-
-    // app.controller("singleProductController", [
-    //     '$scope', '$routeParams', function ($scope, $http, $locationProvider, $routeParams) {
-    //         $http.get("./js/products.json").then(function (response) {
-    //             $scope.productData = response.data.products;
-    //             $scope.products = {};
-    //             productData.id = $routeParams.id;
-    //         })
-    //     }
-    // ]);
-
-    // app.controller("singleProductController", function ($scope, $http, $routeParams) {
-    // var id = $routeParams.id;
-    // $scope.getByID = function() {
-    // $http.get("/user/" + id).then(function(response){
-    // console.log("get");
-    // $scope.user = response.data;
-    // });
-    // }
-
-    // getByID();
-    // });
-    // }
-
-    // app.controller("productSingleController", function ($scope, $http) {
-    // $http.get("./js/products.json").then(function (response) {
-    // $scope.myData = response.data.[];
-    // $scope.products = {};
-    // });
 });
 
 app.controller("singleProductController", function ($scope, $http, $routeParams) {
@@ -399,7 +384,11 @@ app.controller("singleProductController", function ($scope, $http, $routeParams)
         $scope.products = getById($scope.myData, $routeParams.id);
     });
 	
-			
+    $scope.txt='';
+    
+    $scope.resetText = function() {
+        $scope.txt = '';
+    };
 });
 
 
@@ -467,16 +456,14 @@ app.controller("singleProductController", function ($scope, $http, $routeParams)
                         <i class="fa-solid fa-circle-check"></i>
                     </div>
                     <div class="toast__body">
-                    <h3 class="toast__title">Success</h3>
-                    <p class="toast__msg">Added to your cart</p>
+                    <h3 class="toast__title">${title}</h3>
+                    <p class="toast__msg">${message}</p>
                     </div>
                     <div class="toast__close">
                         <i class="fa-solid fa-xmark"></i>
                     </div>
                 `;
-                main.appendChild(toast);
-
-                
+                main.appendChild(toast);             
             }
           }
           
@@ -486,6 +473,24 @@ app.controller("singleProductController", function ($scope, $http, $routeParams)
                 message:'Added to your cart',
                 type:'success',
                 duration : 1000
+            })
+          }
+
+          function showSuccessCheckoutToast(){
+                toast({
+                title:'Successfully checked out',
+                message:'Thank you for your purchase!',
+                type:'success',
+                duration : 1000
+            })
+          }
+          
+          function showSuccessReviewToast(){
+                toast({
+                title:'Review received',
+                message:'Thank you for your thoughts!',
+                type:'success',
+                duration : 1500
             })
           }
 </script>

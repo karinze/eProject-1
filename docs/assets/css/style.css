@@ -72,6 +72,7 @@ h6 {
 .main-heading {
   font-weight: bold;
 }
+
 .main-heading span {
   color: #878a8c;
   font-size: 18px;
@@ -1712,4 +1713,11 @@ table.center {
   width: 95%;
   height: auto;
   margin: 25px 0;
+}
+
+.flex-align-end {
+  justify-content: flex-end!important;
+}
+.flex-align-start {
+  justify-content: flex-start;
 }
