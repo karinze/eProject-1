@@ -90,28 +90,8 @@
         <hr />
         <!-- Available Options Starts -->
         <div class="options">
-          <div class="form-group">
-            <label class="control-label text-uppercase" for="input-quantity"
-              >Qty:</label
-            >
-            <input
-              type="number"
-              name="quantity"
-              value="1"
-              min="1"
-              max=""
-              id="input-quantity"
-              class="form-control"
-            />
-          </div>
           <div class="cart-button button-group float-right" >
-            <button type="button" title="Wishlist" class="btn btn-wishlist">
-              <i class="fa fa-heart"></i>
-            </button>
-            <button type="button" title="Compare" class="btn btn-compare">
-              <i class="fa fa-bar-chart-o"></i>
-            </button>
-            <button type="button" onclick="showSuccessToast()" ng-click="cloneItem(x)" class="btn btn-cart">Add to Cart</button>
+            <button type="button" onclick="showSuccessToast()" ng-click="cloneItem(products)" class="btn btn-cart">Add to Cart</button>
           </div>
         </div>
         <!-- Available Options Ends -->

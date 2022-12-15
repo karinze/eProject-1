@@ -196,17 +196,17 @@ $http.get("./js/products.json").then(function (response) {
 $scope.myData = response.data.products;
 $scope.products = getById($scope.myData, $routeParams.id);
 
-$scope.cloneItem = function(myData) {
-    myData.quantity++;
+$scope.cloneItem = function(products) {
+    products.quantity++;
     $scope.$storage.products.push({
-        "id": myData.id,
-        "name": myData.name,
-        "brand": myData.brand,
-        "category": myData.category,
-        "madeIn": myData.madeIn,
-        "price": myData.price,
-        "imgSrc": myData.imgSrc,
-        "quantity": myData.quantity  
+        "id": products.id,
+        "name": products.name,
+        "brand": products.brand,
+        "category": products.category,
+        "madeIn": products.madeIn,
+        "price": products.price,
+        "imgSrc": products.imgSrc,
+        "quantity": products.quantity  
     })
 }
 $scope.getLocalData = $localStorage.products;
