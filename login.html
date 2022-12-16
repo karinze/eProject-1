@@ -1,88 +1,129 @@
-
-	<!-- Main Container Starts -->
-		<div id="main-container" class="container px-md-0">
-        <!-- Breadcrumb Starts -->
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#/!">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Login</li>
-                </ol>
-            </nav>
-        <!-- Breadcrumb Ends -->
-        <!-- Main Heading Starts -->
-            <h2 class="main-heading text-center">
-                Login or create new account
-            </h2>
-        <!-- Main Heading Ends -->
-        <!-- Login Form Section Starts -->
-            <section class="login-area">
-                <div class="row">
-                    <div class="col-sm-6">
-                    <!-- Login Panel Starts -->
-                        <div class="panel panel-smart">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Login</h3>
-                            </div>
-                            <div class="panel-body">
-                                <p>
-                                    Please login using your existing account
-                                </p>
-                            <!-- Login Form Starts -->
-                                <form class="form-inline" role="form">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="exampleInputEmail2">Username</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Username">
-                                    </div>
-                                    <div class="form-group mx-sm-3">
-                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-                                    </div>
-                                    <button type="submit" class="btn btn-primary
-									">
-                                        Login
-                                    </button>
-                                </form>
-                            <!-- Login Form Ends -->
-                            </div>
-                        </div>
-                    <!-- Login Panel Ends -->
-                    </div>
-                    <div class="col-sm-6">
-                    <!-- Account Panel Starts -->
-                        <div class="panel panel-smart">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">
-                                    Create new account
-                                </h3>
-                            </div>
-                            <div class="panel-body">
-                                <p>
-                                    Register to avoid filling in billing and shipping forms every time you checkout
-                                </p>
-                                <a href="#!register" class="btn btn-outline-secondary">
-                                    Register
-                                </a>
-                            </div>
-                        </div>
-                    <!-- Account Panel Ends -->
-                    <!-- Guest Checkout Panel Starts -->
-                        <div class="panel panel-smart">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">
-                                    Checkout as Guest
-                                </h3>
-                            </div>
-                            <div class="panel-body">
-                                <p>
-                                    Checkout as a guest instead!
-                                </p>
-                                <button class="btn btn-black">As Guest</button>
-                            </div>
-                        </div>
-                    <!-- Guest Checkout Panel Ends -->
-                    </div>
-                </div>
-            </section>
-        <!-- Login Form Section Ends -->
-		</div>
-	<!-- Main Container Ends -->
+<!-- Main Container Starts -->
+<div id="main-container" class="container px-md-0">
+  <!-- Breadcrumb Starts -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#/!">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Login</li>
+    </ol>
+  </nav>
+  <!-- Breadcrumb Ends -->
+  <!-- Main Heading Starts -->
+  <h2 class="main-heading text-center">Login or create new account</h2>
+  <!-- Main Heading Ends -->
+  <!-- Login Form Section Starts -->
+  <section class="login-area">
+    <div class="row">
+      <div class="col-sm-6">
+        <!-- Login Panel Starts -->
+        <div class="panel panel-smart" controller="LoginController">
+          <div class="panel-heading">
+            <h3 class="panel-title">Login</h3>
+          </div>
+          <div class="panel-body">
+            <p>Please login using your existing account</p>
+            <div
+              ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }"
+              ng-if="flash"
+              ng-bind="flash.message"
+            ></div>
+            <!-- Login Form Starts -->
+            <form
+              class="form-inline"
+              name="form"
+              role="form"
+              ng-submit="vm.login()"
+            >
+              <div
+                class="form-group"
+                ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }"
+              >
+                <label class="sr-only" for="username">Username</label>
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  class="form-control"
+                  ng-model="vm.username"
+                  placeholder="Username / Email"
+                  required
+                />
+                <span
+                  ng-show="form.username.$dirty && form.username.$error.required"
+                  class="help-block"
+                  >Username is required</span
+                >
+              </div>
+              <div
+                class="form-group mx-sm-3"
+                ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }"
+              >
+                <label class="sr-only" for="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="form-control"
+                  ng-model="vm.password"
+                  placeholder="Password"
+                  required
+                />
+                <span
+                  ng-show="form.password.$dirty && form.password.$error.required"
+                  class="help-block"
+                  >Password is required</span
+                >
+              </div>
+              <div class="form-actions">
+                <button
+                  type="submit"
+                  ng-disabled="form.$invalid"
+                  class="btn btn-primary"
+                >
+                  Login
+                </button>
+              </div>
+              <img
+                ng-if="vm.dataLoading"
+                src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="
+              />
+            </form>
+            <!-- Login Form Ends -->
+          </div>
+        </div>
+        <!-- Login Panel Ends -->
+      </div>
+      <div class="col-sm-6">
+        <!-- Account Panel Starts -->
+        <div class="panel panel-smart">
+          <div class="panel-heading">
+            <h3 class="panel-title">Create new account</h3>
+          </div>
+          <div class="panel-body">
+            <p>
+              Register to avoid filling in billing and shipping forms every time
+              you checkout
+            </p>
+            <a href="#!register" class="btn btn-outline-secondary">
+              Register
+            </a>
+          </div>
+        </div>
+        <!-- Account Panel Ends -->
+        <!-- Guest Checkout Panel Starts -->
+        <div class="panel panel-smart">
+          <div class="panel-heading">
+            <h3 class="panel-title">Checkout as Guest</h3>
+          </div>
+          <div class="panel-body">
+            <p>Checkout as a guest instead!</p>
+            <a class="btn btn-black" href="#!cart">As Guest</a>
+          </div>
+        </div>
+        <!-- Guest Checkout Panel Ends -->
+      </div>
+    </div>
+  </section>
+  <!-- Login Form Section Ends -->
+</div>
+<!-- Main Container Ends -->

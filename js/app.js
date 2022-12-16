@@ -110,7 +110,15 @@ app.config(function ($routeProvider) {
     .when("/cart", { templateUrl: "cart.html" })
     .when("/product-1/:id", { templateUrl: "product-full.html" });
 });
-
+app.run.$inject = ["$rootScope", "$location", "$cookieStore", "$http"];
+function run($rootScope, $location, $cookieStore, $http) {
+  // keep user logged in after page refresh
+  $rootScope.globals = $cookieStore.get("globals") || {};
+  if ($rootScope.globals.currentUser) {
+    $http.defaults.headers.common["Authorization"] =
+      "Basic " + $rootScope.globals.currentUser.authdata; // jshint ignore:line
+  }
+}
 app.controller(
   "productsListController",
   function (
@@ -254,34 +262,173 @@ app.controller(
     };
   }
 );
-app.controller("registerController", function ($scope, $http) {
-  $scope.submit = function () {
-    // alert("SUBMIT "+$scope.regObj.username);
-    var stat = "false";
-    angular.forEach($scope.mydata, function (item) {
-      // alert(item.email);
-      if (
-        item.email == $scope.regObj.username &&
-        item.Password == $scope.regObj.password
-      ) {
-        stat = "true";
+app.controller("LoginController", LoginController);
+
+LoginController.$inject = [
+  "$location",
+  "AuthenticationService",
+  "FlashService",
+];
+function LoginController($location, AuthenticationService, FlashService) {
+  var vm = this;
+
+  vm.login = login;
+
+  (function initController() {
+    // reset login status
+    AuthenticationService.ClearCredentials();
+  })();
+
+  function login() {
+    vm.dataLoading = true;
+    AuthenticationService.Login(vm.username, vm.password, function (response) {
+      if (response.success) {
+        AuthenticationService.SetCredentials(vm.username, vm.password);
+        $location.path("/");
+      } else {
+        FlashService.Error(response.message);
+        vm.dataLoading = false;
       }
     });
-    $scope.regObj.username = "";
-    $scope.regObj.password = "";
-    if (stat == "true") alert("Success");
-    else alert("Failure");
-  };
+  }
+}
+app.factory("UserService", UserService);
 
-  $scope.regObj = {
-    username: "",
-    password: "",
-  };
-  $scope.mydata;
-  $http.get("https://api.myjson.com/bins/6pd7z").then(function (response) {
-    $scope.mydata = response.data;
-    angular.forEach($scope.mydata, function (item) {
-      // alert(item.email);
+UserService.$inject = ["$timeout", "$filter", "$q"];
+function UserService($timeout, $filter, $q) {
+  var service = {};
+
+  service.GetAll = GetAll;
+  service.GetById = GetById;
+  service.GetByUsername = GetByUsername;
+  service.Create = Create;
+  service.Update = Update;
+  service.Delete = Delete;
+
+  return service;
+
+  function GetAll() {
+    var deferred = $q.defer();
+    deferred.resolve(getUsers());
+    return deferred.promise;
+  }
+
+  function GetById(id) {
+    var deferred = $q.defer();
+    var filtered = $filter("filter")(getUsers(), { id: id });
+    var user = filtered.length ? filtered[0] : null;
+    deferred.resolve(user);
+    return deferred.promise;
+  }
+
+  function GetByUsername(username) {
+    var deferred = $q.defer();
+    var filtered = $filter("filter")(getUsers(), { username: username });
+    var user = filtered.length ? filtered[0] : null;
+    deferred.resolve(user);
+    return deferred.promise;
+  }
+
+  function Create(user) {
+    var deferred = $q.defer();
+
+    // simulate api call with $timeout
+    $timeout(function () {
+      GetByUsername(user.username).then(function (duplicateUser) {
+        if (duplicateUser !== null) {
+          deferred.resolve({
+            success: false,
+            message: 'Username "' + user.username + '" is already taken',
+          });
+        } else {
+          var users = getUsers();
+
+          // assign id
+          var lastUser = users[users.length - 1] || { id: 0 };
+          user.id = lastUser.id + 1;
+
+          // save to local storage
+          users.push(user);
+          setUsers(users);
+
+          deferred.resolve({ success: true });
+        }
+      });
+    }, 1000);
+
+    return deferred.promise;
+  }
+
+  function Update(user) {
+    var deferred = $q.defer();
+
+    var users = getUsers();
+    for (var i = 0; i < users.length; i++) {
+      if (users[i].id === user.id) {
+        users[i] = user;
+        break;
+      }
+    }
+    setUsers(users);
+    deferred.resolve();
+
+    return deferred.promise;
+  }
+
+  function Delete(id) {
+    var deferred = $q.defer();
+
+    var users = getUsers();
+    for (var i = 0; i < users.length; i++) {
+      var user = users[i];
+      if (user.id === id) {
+        users.splice(i, 1);
+        break;
+      }
+    }
+    setUsers(users);
+    deferred.resolve();
+
+    return deferred.promise;
+  }
+
+  // private functions
+
+  function getUsers() {
+    if (!localStorage.users) {
+      localStorage.users = JSON.stringify([]);
+    }
+
+    return JSON.parse(localStorage.users);
+  }
+
+  function setUsers(users) {
+    localStorage.users = JSON.stringify(users);
+  }
+}
+app.controller("RegisterController", RegisterController);
+
+RegisterController.$inject = [
+  "UserService",
+  "$location",
+  "$rootScope",
+  "FlashService",
+];
+function RegisterController(UserService, $location, $rootScope, FlashService) {
+  var vm = this;
+
+  vm.register = register;
+
+  function register() {
+    vm.dataLoading = true;
+    UserService.Create(vm.user).then(function (response) {
+      if (response.success) {
+        FlashService.Success("Registration successful", true);
+        $location.path("/login");
+      } else {
+        FlashService.Error(response.message);
+        vm.dataLoading = false;
+      }
     });
-  });
-});
+  }
+}

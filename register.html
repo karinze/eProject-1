@@ -17,8 +17,9 @@
   <!-- Registration Section Starts -->
   <section
     class="registration-area"
-    controller="registerController"
-    ng-submit="submit()"
+    controller="RegisterController"
+    ng-submit="vm.register()"
+    onsubmit="RegisterToast()"
   >
     <div class="row">
       <div class="col-sm-12">
@@ -26,7 +27,7 @@
         <div class="panel panel-smart">
           <div class="panel-body">
             <!-- Registration Form Starts -->
-            <form class="form">
+            <form class="form" name="form" role="form">
               <h3 class="panel-heading inner">Register info</h3>
               <!-- Password Area Starts -->
               <div class="form-group row">
@@ -41,10 +42,15 @@
                     class="form-control"
                     id="inputUsername"
                     placeholder="Username"
-                    ng-model="regObj.username"
+                    ng-model="username"
                     required="required"
                   />
                 </div>
+                <span
+                  ng-show="form.username.$dirty && form.username.$error.required"
+                  class="help-block"
+                  >Username is required</span
+                >
               </div>
               <div class="form-group row">
                 <label
@@ -58,10 +64,15 @@
                     class="form-control"
                     id="inputPassword"
                     placeholder="Password"
-                    ng-model="regObj.password"
+                    ng-model="password"
                     required="required"
                   />
                 </div>
+                <span
+                  ng-show="form.password.$dirty && form.password.$error.required"
+                  class="help-block"
+                  >Password is required</span
+                >
               </div>
               <div class="form-group row">
                 <label
@@ -75,10 +86,15 @@
                     class="form-control"
                     id="inputRePassword"
                     placeholder="Confirm Password"
-                    ng-model="regObj.rePassword"
+                    ng-model="repassword"
                     required="required"
                   />
                 </div>
+                <span
+                  ng-show="form.repassword.$dirty && form.repassword.$error.required"
+                  class="help-block"
+                  >Confirm password is required</span
+                >
               </div>
               <div class="form-group row">
                 <span class="col-sm-3 col-form-label text-right"
@@ -122,9 +138,17 @@
               </div>
               <div class="form-group row">
                 <div class="offset-sm-3 col-sm-6">
-                  <button type="submit" class="btn btn-outline-success">
+                  <button
+                    type="submit"
+                    class="btn btn-outline-success"
+                    ng-disabled="form.$invalid"
+                  >
                     Register
                   </button>
+                  <img
+                    ng-if="vm.dataLoading"
+                    src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="
+                  />
                 </div>
               </div>
               <!-- Password Area Ends -->
