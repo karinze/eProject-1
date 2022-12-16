@@ -17,9 +17,7 @@
   <!-- Registration Section Starts -->
   <section
     class="registration-area"
-    controller="RegisterController"
-    ng-submit="vm.register()"
-    onsubmit="RegisterToast()"
+    ng-controller="productsListController"
   >
     <div class="row">
       <div class="col-sm-12">
@@ -27,28 +25,8 @@
         <div class="panel panel-smart">
           <div class="panel-body">
             <!-- Registration Form Starts -->
-            <div
-              class="error form-hint"
-              ng-messages="form.confirm.$error"
-              data-ng-show="form.confirm.$dirty"
-            >
-              <p ng-show="form.confirm.$error.required" ng-message="required">
-                {{"You can't leave this empty."}}
-              </p>
-              <p
-                ng-show="!(form.confirm.$error.pattern && form.confirm.$error.required) && form.password.$invalid && !form.confirm.$invalid"
-                ng-message="pattern"
-              >
-                {{"Confirm Password with our strong password policy!"}}
-              </p>
-              <p
-                ng-show="form.confirm.$invalid && !form.confirm.$error.required && form.confirm.$error.pattern"
-                ng-message=""
-              >
-                {{"These passwords don't match. Try again?"}}
-              </p>
-            </div>
-            <form class="form" name="form" role="form">
+            
+            <form class="form" ng-model="form" name="form" role="form">
               <h3 class="panel-heading inner">Register info</h3>
               <!-- Password Area Starts -->
               <div class="form-group row">
@@ -66,14 +44,10 @@
                     ng-model="username"
                     autocomplete="off"
                     ng-class="{'form-error': form.username.$error}"
-                    required
+                    ng-required="username"
                   />
                 </div>
-                <span
-                  ng-show="form.username.$dirty && form.username.$error.required"
-                  class="help-block"
-                  >Username is required</span
-                >
+                
               </div>
               <div class="form-group row">
                 <label
@@ -87,17 +61,12 @@
                     class="form-control"
                     id="inputPassword"
                     placeholder="Password"
-                    ng-model="password77"
-                    required
+                    ng-model="password"
+                    ng-required="password"
                     ng-class="{'form-error': form.password.$error}"
-                    ng-minlength="7"
                   />
                 </div>
-                <span
-                  ng-show="form.password.$dirty && form.password.$error.required"
-                  class="help-block"
-                  >Password is required</span
-                >
+                
               </div>
               <div class="form-group row">
                 <label
@@ -111,16 +80,13 @@
                     class="form-control"
                     id="inputconfirm"
                     placeholder="Confirm Password"
-                    ng-model="confirm77"
+                    ng-model="confirm"
+                    ng-required="password"
                     ng-class="{'form-error': form.confirm.$error}"
                     required
                   />
                 </div>
-                <span
-                  ng-show="form.confirm.$dirty && form.confirm.$error.required"
-                  class="help-block"
-                  >Confirm password is required</span
-                >
+                
               </div>
               <div class="form-group row">
                 <span class="col-sm-3 col-form-label text-right"
@@ -168,6 +134,7 @@
                     type="submit"
                     class="btn btn-outline-success"
                     ng-disabled="form.$invalid"
+                    ng-click="registerConfirm()"
                   >
                     Register
                   </button>
@@ -258,3 +225,4 @@
   <!-- Registration Section Ends -->
 </div>
 <!-- Main Container Ends -->
+<div id="toast"></div>

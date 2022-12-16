@@ -66,27 +66,22 @@ function showSuccessReviewToast() {
     duration: 2000,
   });
 }
-function LoginToast() {
+function loginToast() {
   toast({
     title: "Login successful",
     message: "Welcome!",
     type: "success",
     duration: 2000,
   });
-  $timeout(function () {
-    window.location.href = "#/!";
-  }, 3000);
+  
 }
-function RegisterToast() {
+function registerToast() {
   toast({
     title: "Register successful",
     message: "Thank you for joining us!",
     type: "success",
     duration: 2000,
   });
-  $timeout(function () {
-    window.location.href = "#!register";
-  }, 3000);
 }
 
 $.getJSON("products.json", function (json) {
@@ -231,6 +226,18 @@ app.controller(
           nuke();
         }
       };
+      $scope.loginConfirm = function() {
+        loginToast();
+        $timeout(function () {
+          window.location.href = "#/!";
+        }, 3000);
+      }
+      $scope.registerConfirm = function() {
+        registerToast();
+        $timeout(function () {
+          window.location.href = "#!login";
+        }, 3000);
+      }
     });
   }
 );
@@ -300,13 +307,18 @@ function LoginController($location, AuthenticationService, FlashService) {
     // reset login status
     AuthenticationService.ClearCredentials();
   })();
-
+  $scope.loginConfirm = function() {
+    LoginToast();
+    $timeout(function () {
+      window.location.href = "#/!";
+    }, 3000);
+  }
   function login() {
     vm.dataLoading = true;
     AuthenticationService.Login(vm.username, vm.password, function (response) {
       if (response.success) {
         AuthenticationService.SetCredentials(vm.username, vm.password);
-        $location.path("/");
+        $location.path("#/!");
       } else {
         FlashService.Error(response.message);
         vm.dataLoading = false;
@@ -446,11 +458,15 @@ function RegisterController(UserService, $location, $rootScope, FlashService) {
     UserService.Create(vm.user).then(function (response) {
       if (response.success) {
         FlashService.Success("Registration successful", true);
-        $location.path("/login");
+        window.location.href = "#!login";
       } else {
         FlashService.Error(response.message);
         vm.dataLoading = false;
       }
     });
   }
+  
+      
+
+  
 }
