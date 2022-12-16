@@ -1,11 +1,11 @@
-function toast({ title = "", message = "", type = "", duration = 1000 }) {
+function toast({ title = "", message = "", type = "", duration }) {
   const main = document.getElementById("toast");
   if (main) {
     const toast = document.createElement("div");
     //Auto remove toast
     const autoRemoveId = setTimeout(function () {
       main.removeChild(toast);
-    }, duration + 1000);
+    }, duration + 2000);
     toast.onclick = function (e) {
       if (e.target.closest(".toast__close")) {
         main.removeChild(toast);
@@ -14,7 +14,7 @@ function toast({ title = "", message = "", type = "", duration = 1000 }) {
     };
     const delay = (duration / 1000).toFixed(2);
     toast.classList.add("toast", `toast--${type}`);
-    toast.style.animation = `slideInLeft ease 2s, linear 4.5s ${delay}s forwards `;
+    toast.style.animation = `slideInLeft ease 1.2s, linear 4.5s ${delay}s forwards `;
     toast.innerHTML = `
                 <div class="toast__icon">
                 <i class="fa-solid fa-circle-check"></i>
@@ -36,7 +36,7 @@ function showSuccessToast() {
     title: "Success",
     message: "Added to your cart",
     type: "success",
-    duration: 1000,
+    duration: 3000,
   });
 }
 
@@ -45,7 +45,7 @@ function showSuccessCheckoutToast() {
     title: "Successfully checked out",
     message: "Thank you for your purchase!",
     type: "success",
-    duration: 1000,
+    duration: 2000,
   });
 }
 
@@ -54,7 +54,7 @@ function showFailCheckoutToast() {
     title: "Uh oh!",
     message: "You have no items in your cart",
     type: "failure",
-    duration: 1000,
+    duration: 2000,
   });
 }
 
@@ -63,7 +63,7 @@ function showSuccessReviewToast() {
     title: "Review received",
     message: "Thank you for your thoughts!",
     type: "success",
-    duration: 1500,
+    duration: 2000,
   });
 }
 
@@ -126,7 +126,7 @@ app.controller(
     });
     function nuke() {
       $timeout(function () {
-        location.reload();
+        window.location.href = "#/!";
       }, 3000);
     }
     $http.get("./js/products.json").then(function (response) {
@@ -254,3 +254,34 @@ app.controller(
     };
   }
 );
+app.controller("registerController", function ($scope, $http) {
+  $scope.submit = function () {
+    // alert("SUBMIT "+$scope.regObj.username);
+    var stat = "false";
+    angular.forEach($scope.mydata, function (item) {
+      // alert(item.email);
+      if (
+        item.email == $scope.regObj.username &&
+        item.Password == $scope.regObj.password
+      ) {
+        stat = "true";
+      }
+    });
+    $scope.regObj.username = "";
+    $scope.regObj.password = "";
+    if (stat == "true") alert("Success");
+    else alert("Failure");
+  };
+
+  $scope.regObj = {
+    username: "",
+    password: "",
+  };
+  $scope.mydata;
+  $http.get("https://api.myjson.com/bins/6pd7z").then(function (response) {
+    $scope.mydata = response.data;
+    angular.forEach($scope.mydata, function (item) {
+      // alert(item.email);
+    });
+  });
+});

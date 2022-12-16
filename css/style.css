@@ -746,7 +746,6 @@ ul.header-links li a:focus {
   padding-top: 30px;
 }
 .registration-area {
-  padding-top: 20px;
 }
 .media {
   margin-top: 15px;
@@ -772,7 +771,6 @@ ul.header-links li a:focus {
   padding: 20px 0 0;
 }
 .registration-area .inner {
-  margin-top: 30px;
   margin-bottom: 20px;
 }
 .registration-area .control-label {
@@ -1818,4 +1816,16 @@ table.center {
 }
 .user {
   margin-left: 5%;
+}
+
+.scroll-bar {
+  overflow-y: scroll;
+  height: 300px;
+}
+@media (max-width: 768px) {
+  #toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+  }
 }
