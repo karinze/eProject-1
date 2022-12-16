@@ -236,7 +236,6 @@ ul.header-links li a:focus {
   display: none;
 }
 #cart .btn .fa-shopping-cart {
-  margin-right: 8px;
   color: #fff;
   font-size: 18px;
   vertical-align: text-top;
@@ -385,7 +384,6 @@ ul.header-links li a:focus {
 
 #main-menu {
   text-align: center;
-  background: #fff;
 }
 #main-menu.navbar {
   margin: 0;
@@ -1715,23 +1713,23 @@ table.center {
 #map-block {
   height: 322px;
 }
-.header-news{
-  font-family:inherit;
+.header-news {
+  font-family: inherit;
 }
-.form-news{
-  font-family:initial;
-  font-size: 18px;;
+.form-news {
+  font-family: initial;
+  font-size: 18px;
 }
-.classify{
+.classify {
   font-size: large;
 }
-.img-news-1{
-width: 95%;
-height: 25%;
-margin-top: 25px;
-margin-bottom: 25px;
+.img-news-1 {
+  width: 95%;
+  height: 25%;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
-.img-news-2{
+.img-news-2 {
   width: 100%;
   height: 500px;
   background-color: #000;
@@ -1740,10 +1738,8 @@ margin-bottom: 25px;
   position: -webkit-sticky;
   top: 0;
 }
-.col-sm-9{
-  margin-bottom: 150px;
-}
-.toast{
+
+.toast {
   display: flex;
   align-items: center;
   background-color: #fff;
@@ -1754,63 +1750,64 @@ margin-bottom: 25px;
   width: 400px;
   height: 90px;
   margin-bottom: 10px;
-  transition: all linear .3s;
+  transition: all linear 0.3s;
 }
 
 @keyframes slideInLeft {
   from {
-   opacity: 0;
-    transform:translateX(calc( 100% + 32px));
+    opacity: 0;
+    transform: translateX(calc(100% + 32px));
   }
   to {
     opacity: 1;
-    transform:translateX(0);
+    transform: translateX(0);
   }
 }
-@keyframes fadeOut{
+@keyframes fadeOut {
   to {
     opacity: 0;
   }
 }
-.toast--success{
-  border-color:#47d864 ;
+.toast--success {
+  border-color: #47d864;
 }
-.toast--success .toast__icon{
+.toast--success .toast__icon {
   color: #47d864;
 }
 
-.toast__icon{
+.toast__icon {
   font-size: 24px;
 }
 
-.toast__icon,.toast__close{
+.toast__icon,
+.toast__close {
   padding: 0 16px;
 }
-.toast__body{
+.toast__body {
   flex-grow: 1;
 }
-.toast__title{
+.toast__title {
   font-size: 16px;
   font-weight: 600;
   color: #333;
 }
-.toast__msg{
+.toast__msg {
   font-size: 14px;
   color: #888;
   margin-top: 6px;
   line-height: 1.5;
 }
-.toast__close{
+.toast__close {
   font-size: 20px;
   color: rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
-#toast{
+#toast {
   position: fixed;
-  top: 32px;
+  bottom: 32px;
   right: 32px;
 }
-.product-col:hover{
+.product-col:hover {
   border-color: rgb(16, 7, 92);
 }
 .avatar {
@@ -1819,6 +1816,6 @@ margin-bottom: 25px;
   height: 20px;
   clip-path: circle(20px at 120% 120%);
 }
-.user{
+.user {
   margin-left: 5%;
 }

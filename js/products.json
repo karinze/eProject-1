@@ -449,6 +449,56 @@
       "price": 10.25,
       "imgSrc": "images/product-images/vitamins/men-vi-sinh-clausy-10-ong-hop.png",
       "quantity": 0
+    },
+    {
+      "id": 46,
+      "name": "Baby Clothes Pink",
+      "brand": "CF",
+      "category": "Clothes",
+      "madeIn": "Viet Nam",
+      "price": 10.25,
+      "imgSrc": "images/product-images/clothes/clothes (1).jpg",
+      "quantity": 0
+    },
+    {
+      "id": 47,
+      "name": "Blue Clothes",
+      "brand": "CF",
+      "category": "Clothes",
+      "madeIn": "Viet Nam",
+      "price": 10.25,
+      "imgSrc": "images/product-images/clothes/clothes (2).jpg",
+      "quantity": 0
+    },
+    {
+      "id": 48,
+      "name": "Champion Baseball Set",
+      "brand": "Champion",
+      "category": "Clothes",
+      "madeIn": "Viet Nam",
+      "price": 10.25,
+      "imgSrc": "images/product-images/clothes/clothes (3).jpg",
+      "quantity": 0
+    },
+    {
+      "id": 49,
+      "name": "White Dress",
+      "brand": "CF",
+      "category": "Clothes",
+      "madeIn": "Viet Nam",
+      "price": 10.25,
+      "imgSrc": "images/product-images/clothes/clothes (4).jpg",
+      "quantity": 0
+    },
+    {
+      "id": 50,
+      "name": "Yellow overalls",
+      "brand": "HeartY",
+      "category": "Clothes",
+      "madeIn": "Viet Nam",
+      "price": 10.25,
+      "imgSrc": "images/product-images/clothes/clothes (5).jpg",
+      "quantity": 0
     }
   ]
 }
