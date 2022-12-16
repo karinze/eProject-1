@@ -396,8 +396,8 @@ ul.header-links li a:focus {
 }
 #main-menu .navbar-toggler {
   margin-top: 9px;
-  color: #ec2f8e;
-  font-size: 16px;
+  color: #ffffff;
+  font-size: 30px;
 }
 #main-menu .navbar-toggler:focus {
   outline: none;
@@ -405,6 +405,10 @@ ul.header-links li a:focus {
 .main-menu .navbar-toggler:hover,
 .main-menu .navbar-toggler:focus {
   color: #2f81ec;
+}
+.navbar-toggler{
+  padding-left: 3em;
+  padding-right: 0px;
 }
 #main-menu .navbar-nav > .nav-item > a {
   padding: 10px 20px 10px;
