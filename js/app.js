@@ -73,6 +73,9 @@ function LoginToast() {
     type: "success",
     duration: 2000,
   });
+  $timeout(function () {
+    window.location.href = "#/!";
+  }, 3000);
 }
 function RegisterToast() {
   toast({
@@ -81,6 +84,9 @@ function RegisterToast() {
     type: "success",
     duration: 2000,
   });
+  $timeout(function () {
+    window.location.href = "#!register";
+  }, 3000);
 }
 
 $.getJSON("products.json", function (json) {
