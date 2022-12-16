@@ -27,6 +27,27 @@
         <div class="panel panel-smart">
           <div class="panel-body">
             <!-- Registration Form Starts -->
+            <div
+              class="error form-hint"
+              ng-messages="form.confirm.$error"
+              data-ng-show="form.confirm.$dirty"
+            >
+              <p ng-show="form.confirm.$error.required" ng-message="required">
+                {{"You can't leave this empty."}}
+              </p>
+              <p
+                ng-show="!(form.confirm.$error.pattern && form.confirm.$error.required) && form.password.$invalid && !form.confirm.$invalid"
+                ng-message="pattern"
+              >
+                {{"Confirm Password with our strong password policy!"}}
+              </p>
+              <p
+                ng-show="form.confirm.$invalid && !form.confirm.$error.required && form.confirm.$error.pattern"
+                ng-message=""
+              >
+                {{"These passwords don't match. Try again?"}}
+              </p>
+            </div>
             <form class="form" name="form" role="form">
               <h3 class="panel-heading inner">Register info</h3>
               <!-- Password Area Starts -->
@@ -43,7 +64,9 @@
                     id="inputUsername"
                     placeholder="Username"
                     ng-model="username"
-                    required="required"
+                    autocomplete="off"
+                    ng-class="{'form-error': form.username.$error}"
+                    required
                   />
                 </div>
                 <span
@@ -64,8 +87,10 @@
                     class="form-control"
                     id="inputPassword"
                     placeholder="Password"
-                    ng-model="password"
-                    required="required"
+                    ng-model="password77"
+                    required
+                    ng-class="{'form-error': form.password.$error}"
+                    ng-minlength="7"
                   />
                 </div>
                 <span
@@ -76,7 +101,7 @@
               </div>
               <div class="form-group row">
                 <label
-                  for="inputRePassword"
+                  for="inputconfirm"
                   class="col-sm-3 col-form-label text-right"
                   >Confirm Password *</label
                 >
@@ -84,14 +109,15 @@
                   <input
                     type="password"
                     class="form-control"
-                    id="inputRePassword"
+                    id="inputconfirm"
                     placeholder="Confirm Password"
-                    ng-model="repassword"
-                    required="required"
+                    ng-model="confirm77"
+                    ng-class="{'form-error': form.confirm.$error}"
+                    required
                   />
                 </div>
                 <span
-                  ng-show="form.repassword.$dirty && form.repassword.$error.required"
+                  ng-show="form.confirm.$dirty && form.confirm.$error.required"
                   class="help-block"
                   >Confirm password is required</span
                 >
@@ -130,7 +156,7 @@
                 <div class="offset-sm-3 col-sm-6">
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox" /> I agree to the Terms &
+                      <input type="checkbox" required /> I agree to the Terms &
                       Conditions *
                     </label>
                   </div>

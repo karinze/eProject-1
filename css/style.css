@@ -1829,3 +1829,6 @@ table.center {
     right: 32px;
   }
 }
+.form-error {
+  border: 1px solid red;
+}

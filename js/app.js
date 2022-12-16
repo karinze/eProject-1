@@ -66,6 +66,22 @@ function showSuccessReviewToast() {
     duration: 2000,
   });
 }
+function LoginToast() {
+  toast({
+    title: "Login successful",
+    message: "Welcome!",
+    type: "success",
+    duration: 2000,
+  });
+}
+function RegisterToast() {
+  toast({
+    title: "Register successful",
+    message: "Thank you for joining us!",
+    type: "success",
+    duration: 2000,
+  });
+}
 
 $.getJSON("products.json", function (json) {
   var productArray = [];
